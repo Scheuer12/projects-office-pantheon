@@ -1,0 +1,27 @@
+premise: >
+  Contar a historia do [REDACTED_INSTRUCTION] do cliente por dentro do codigo
+  e estrutura do [COMPANY_PRODUCT]. O output deve ser um storytelling da operação do
+  cliente exclusivamente em termos de fluxos, módulos e configurações do [CODE_REFERENCE].
+must:
+  - use_[COMPANY_INTERNAL_ID]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+must_not:
+  - invent_screens
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - overwrite_asis
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+narrative_arcs:
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+precision:
+  A_storytelling: [REDACTED_INSTRUCTION]
+  B_implantation: [REDACTED_INSTRUCTION]

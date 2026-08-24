@@ -1,0 +1,8 @@
+## Evidências
+
+| # | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] | Ref | [REDACTED_INSTRUCTION] |
+|---|--------|--------|-------|-----|-----------|
+| 1 | [REDACTED_INSTRUCTION] | … | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] |
+
+### Lacunas
+- …

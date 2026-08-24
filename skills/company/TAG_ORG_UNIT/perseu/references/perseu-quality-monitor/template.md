@@ -1,0 +1,29 @@
+## Resumo AS IS
+- **Cliente:** …
+- **Status:** DRAFT_BLOCKED | DRAFT_READY_FOR_VALIDATION | VALIDATED_BY_CLIENT
+- **Completude:** 0–100
+- **Blockers:** …
+
+## Fatos confirmados
+- …
+
+## Indícios
+- …
+
+## Lacunas / conflitos
+- …
+
+## [REDACTED_INSTRUCTION] TO BE
+- …
+
+## QA
+- IDs duplicados: …
+- Refs quebradas: …
+- Contaminação futura no corpo: …
+- [VALIDATION_STAGE] automática: proibida
+
+## Monitor — Qualidade
+- **Veredicto:** CONFIRMADO | PARCIAL | BLOQUEADO
+- **Read-only:** sim
+- **Retorno a Papiro:** sim/não
+- **AI Team trace:** … → Quality Monitor → **Fallback**

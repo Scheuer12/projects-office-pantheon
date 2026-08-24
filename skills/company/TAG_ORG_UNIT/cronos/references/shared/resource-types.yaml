@@ -1,0 +1,130 @@
+# Função e status operacional do Recurso [CODE_REFERENCE]
+# Allowlist `[INTERNAL_API_METHOD]` = fonte gestão [COMPANY_PRODUCT] (humano). Contagens de cadastro = MCP [INTERNAL_API_METHOD]/GetSprint.
+# Campo função: `[INTERNAL_API_METHOD]` (filtro WS `[INTERNAL_API_METHOD]` — quebrado em [ENVIRONMENT], filtrar client-side).
+# Campo ativo: NÃO confiável só pelo cadastro [CODE_REFERENCE] — usar allowlist `[INTERNAL_API_METHOD]` abaixo.
+
+meta:
+  campo_funcao: [REDACTED_INSTRUCTION]
+  campo_ativo_operacional: [REDACTED_INSTRUCTION]
+  filtro_ws: [REDACTED_INSTRUCTION]
+  filtro_ws_status: [REDACTED_INSTRUCTION]
+  nivel_interno: [REDACTED_INSTRUCTION]
+  # NÃO hardcodar totais de [ENVIRONMENT] aqui — [REDACTED_INSTRUCTION].
+  # N_capacidade = len(ativos.consultor) no momento da análise (revalidar IDs via [INTERNAL_API_METHOD]).
+  capacidade_n_source: [REDACTED_INSTRUCTION]
+  last_mcp_spotcheck: [REDACTED_INSTRUCTION]
+
+# id → rótulo operacional (função do recurso no [CODE_REFERENCE])
+tipos:
+  1:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_1], [PERSON_NAME_2]]
+  2:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME], [PERSON_NAME], [PERSON_NAME_17], [PERSON_NAME_3], [ROLE_PLACEHOLDER_1]]
+  3:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_18], [PERSON_NAME_4], [ROLE_PLACEHOLDER_2]]
+  4:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_5], [PERSON_NAME_19], [PERSON_NAME_6], [PERSON_NAME_7]]
+  5:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_8], [PERSON_NAME_20], [SYSTEM_USER_1]]
+    nota: [REDACTED_INSTRUCTION]
+  6:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[SYSTEM_RESOURCE_2], [SYSTEM_RESOURCE_1] [CODE_REFERENCE], [VALIDATION_STAGE] [PERSON_NAME_7]]
+  8:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_9], [PERSON_NAME_10]]
+  9:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_11], [PERSON_NAME_12], [PERSON_NAME_13]]
+  11:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_21], [PERSON_NAME_22]]
+  12:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_14]]
+  13:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_23], [PERSON_NAME_24]]
+  14:
+    label: [REDACTED_INSTRUCTION]
+    exemplos: [[PERSON_NAME_15], [CODE_REFERENCE], [PERSON_NAME_25], [PERSON_NAME_26]]
+
+# Agrupamentos por função (cadastro [CODE_REFERENCE] — inclui inativos)
+grupos:
+  consultor:
+    ids: [2, 8, 11, 13]
+    descricao: [REDACTED_INSTRUCTION]
+  analista:
+    ids: [4]
+  desenvolvedor:
+    ids: [12, 14]
+  comercial:
+    ids: [9]
+  suporte:
+    ids: [3]
+  gestao:
+    ids: [1]
+  sistema:
+    ids: [5, 6]
+
+# Recursos ATIVOS operacionalmente (allowlist gestão [COMPANY_PRODUCT])
+# Ausência aqui = inativo para Cronos, mesmo existindo no [CODE_REFERENCE].
+# Capacidade N = quantidade de entradas em ativos.consultor (não literal em skills).
+# Em perguntas de capacidade/risco: Reader confirma cada id ainda existe no [INTERNAL_API_METHOD].
+ativos:
+  validated_at: [REDACTED_INSTRUCTION]
+  fonte: [REDACTED_INSTRUCTION]
+  # N = 3. [PERSON_NAME_16] ([RESOURCE_ID_4]) saiu em [DATE] — posição vaga, sem substituto (vault Time Atual).
+  consultor:
+    - id: [RESOURCE_ID_1]
+      nome: [REDACTED_INSTRUCTION]
+      descricao_tar: [REDACTED_INSTRUCTION]
+      idTipoRecurso: [REDACTED_INSTRUCTION]
+    - id: [RESOURCE_ID_2]
+      nome: [REDACTED_INSTRUCTION]
+      descricao_tar: [REDACTED_INSTRUCTION]
+      idTipoRecurso: [REDACTED_INSTRUCTION]
+    - id: [RESOURCE_ID_3]
+      nome: [REDACTED_INSTRUCTION]
+      descricao_tar: [REDACTED_INSTRUCTION]
+      idTipoRecurso: [REDACTED_INSTRUCTION]
+  analista: [REDACTED_INSTRUCTION]
+  desenvolvedor: [REDACTED_INSTRUCTION]
+  saidas:
+    - id: [RESOURCE_ID_4]
+      nome: [REDACTED_INSTRUCTION]
+      descricao_tar: [REDACTED_INSTRUCTION]
+      saida_em: [REDACTED_INSTRUCTION]
+      motivo: [REDACTED_INSTRUCTION]
+
+# Excluir do universo operacional mesmo sendo interno
+excluir:
+  por_id_tipo: [5, 6]
+  [INTERNAL_IDENTIFIER]:
+    - "[SYSTEM_RESOURCE_2]"
+    - "[SYSTEM_RESOURCE_3]"
+    - "[SYSTEM_USER_2]"
+    - "[SYSTEM_RESOURCE_1]"
+    - "[ROLE_PLACEHOLDER_2]"
+  [INTERNAL_IDENTIFIER]:
+    - "[ROLE_PLACEHOLDER_3]"  # recurso placeholder genérico, não pessoa
+
+# Defaults quando a pergunta não especifica função
+default_universo:
+  consultor: [REDACTED_INSTRUCTION]
+  analista: [REDACTED_INSTRUCTION]
+  desenvolvedor: [REDACTED_INSTRUCTION]
+  consultor_cadastrados: [REDACTED_INSTRUCTION]
+  recurso_interno: [REDACTED_INSTRUCTION]
+
+# Ordem de filtros (sempre nesta sequência)
+pipeline_filtro:
+  - recursoNivel == 1
+  - NOT excluir
+  - [INTERNAL_IDENTIFIER] ∈ grupos.{funcao}
+  - id ∈ ativos.{funcao}   # omitir só se gestor pedir cadastro completo

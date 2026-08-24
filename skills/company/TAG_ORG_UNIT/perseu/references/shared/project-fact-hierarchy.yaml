@@ -1,0 +1,12 @@
+# Autoridade para fatos do projeto
+order:
+  1: [REDACTED_INSTRUCTION]
+  2: [REDACTED_INSTRUCTION]
+  3: [REDACTED_INSTRUCTION]
+  4: [REDACTED_INSTRUCTION]
+
+proposal_rule: >
+  Proposta/comercial apenas caracteriza escopo; nunca comprova execução.
+conflict_rule: >
+  Registrar fontes conflitantes e perguntar ao cliente;
+  nunca escolher silenciosamente.

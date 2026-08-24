@@ -1,0 +1,14 @@
+{
+  "builtAt": "[DATE]",
+  "sourceCodeDir": "[REDACTED_SOURCE_PATH]",
+  "kbDir": "[REDACTED_KB_PATH]",
+  "files": [
+    "README.md",
+    "flows.md",
+    "glossary.md",
+    "modules.md"
+  ],
+  "summary": "Sanitized portfolio stub. Original product/module/flow/routine details were removed. The retained files demonstrate KB structure, evidence discipline, and mapping contracts only.",
+  "agentId": "agent-[UUID]",
+  "runId": "run-[UUID]"
+}

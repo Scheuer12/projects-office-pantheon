@@ -1,0 +1,19 @@
+# SLA e suporte — Athena
+
+[INTERNAL_IDENTIFIER]:
+  critico: [REDACTED_INSTRUCTION]
+  alto: [REDACTED_INSTRUCTION]
+  media: [REDACTED_INSTRUCTION]
+  baixa: [REDACTED_INSTRUCTION]
+
+agente_suporte:
+  max_minutos_consecutivos_mesmo_chamado_antes_encaminhar: [REDACTED_INSTRUCTION]
+  encaminhar_se_em_minutos_nao_resolvera: [REDACTED_INSTRUCTION]
+
+csat:
+  pesos: [1, 3, 5]
+  peso_insatisfeito: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    acao: [REDACTED_INSTRUCTION]
+    prazo_dias_uteis: [REDACTED_INSTRUCTION]
+    deve_incluir: [plano_acao, resolucao_ou_encaminhamento, solicitar_nova_avaliacao]

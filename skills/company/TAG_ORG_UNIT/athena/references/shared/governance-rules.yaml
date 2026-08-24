@@ -1,0 +1,15 @@
+# Governança operacional — Athena
+
+checks:
+  - [INTERNAL_IDENTIFIER]
+  - descricoes_inteligiveis
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - escalonamento_adequado
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+
+proibicoes:
+  - [INTERNAL_IDENTIFIER]  # Cronos
+  - [INTERNAL_IDENTIFIER]

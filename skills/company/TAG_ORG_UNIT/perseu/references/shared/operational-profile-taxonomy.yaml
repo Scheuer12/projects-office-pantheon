@@ -1,0 +1,13 @@
+profiles:
+  - id: [OPERATION_PROFILE_4]
+    questionnaire_hint: [REDACTED_INSTRUCTION]
+  - id: [OPERATION_PROFILE_1]
+    questionnaire_hint: [REDACTED_INSTRUCTION]
+  - id: [OPERATION_PROFILE_3]
+    questionnaire_hint: [REDACTED_INSTRUCTION]
+  - id: [OPERATION_PROFILE_2]
+    questionnaire_hint: [REDACTED_INSTRUCTION]
+multi_profile_allowed: [REDACTED_INSTRUCTION]
+undefined_profile_is_blocker: [REDACTED_INSTRUCTION]
+apply_only_relevant_blocks: [REDACTED_INSTRUCTION]
+common_wms_core: [REDACTED_INSTRUCTION]

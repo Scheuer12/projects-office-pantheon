@@ -1,0 +1,32 @@
+# Dimensões de completude no levantamento (espelho operacional; não fórmula oficial do POP)
+# Detalhe canônico de evidence_completeness em Perseu/completeness-rules.yaml
+
+dimensions:
+  structural_completeness:
+    meaning: [REDACTED_INSTRUCTION]
+    not_informed_counts_as_structurally_present: [REDACTED_INSTRUCTION]
+  evidence_completeness:
+    method_id: [REDACTED_INSTRUCTION]
+    authority: [REDACTED_INSTRUCTION]
+    normative: [REDACTED_INSTRUCTION]
+    awaiting_business_validation: [REDACTED_INSTRUCTION]
+    not_informed_counts_as_zero_evidence: [REDACTED_INSTRUCTION]
+    na_counts_only_with_justification_and_source: [REDACTED_INSTRUCTION]
+  process_coverage:
+    labels: [mapped, partial, unmapped]
+    score_may_not_promote_partial_to_mapped: [REDACTED_INSTRUCTION]
+  blocker_status:
+    independent_of_scores: [REDACTED_INSTRUCTION]
+  ecosystem_coverage:
+    meaning: [REDACTED_INSTRUCTION]
+    reference: [REDACTED_INSTRUCTION]
+    [EXTERNAL_SYSTEM]_only_without_confirmation: [REDACTED_INSTRUCTION]
+
+score_guards:
+  [INTERNAL_IDENTIFIER]:
+    - eliminate_blocker
+    - authorize_tobe
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+
+prohibit_claim_as_official: [REDACTED_INSTRUCTION]

@@ -1,0 +1,140 @@
+# Blocos de campo — [IMPLEMENTATION_EVENT], [VALIDATION_STAGE], Setup
+# Validado com gestão e estrutura [CODE_REFERENCE] (ex.: [PROJECT_CLIENT_2] #[TASK_ID_1] + filhas Dia 01–09).
+# Usar para: capacidade consultor, implantações simultâneas, livre de [IMPLEMENTATION_EVENT],
+# planejamento 2 vs 3 consultores. NÃO usar contagem bruta de tarefas.
+
+meta:
+  validated_at: [REDACTED_INSTRUCTION]
+  hierarquia_tarefa: [REDACTED_INSTRUCTION]
+  exemplo_pai: [REDACTED_INSTRUCTION]
+  exemplo_filhas: [[TASK_ID_2], [TASK_ID_3], [TASK_ID_4]]
+  nota: [REDACTED_INSTRUCTION]
+
+# --- Hierarquia [CODE_REFERENCE] ---
+
+hierarquia:
+  extrair_pai:
+    campo: [REDACTED_INSTRUCTION]
+    regex: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    titulo_regex: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    titulo_regex: [REDACTED_INSTRUCTION]
+  regra: |
+    Construir mapa pai ← filhas a partir de [REDACTED_INSTRUCTION].
+    Subtarefas com referência ao pai NUNCA entram como bloco próprio.
+
+# --- O que é um BLOCO de campo (unidade de capacidade) ---
+
+bloco_implantacao:
+  incluir_se:
+    - [INTERNAL_IDENTIFIER]
+    - titulo_match: '^[REDACTED_INSTRUCTION]$'
+    - titulo_prefix: 'reimplanta'
+  [INTERNAL_IDENTIFIER]:
+    - 'roteiro'
+    - 'entreg[aá]veis'
+    - 'registro'
+    - 'plano'
+    - 'termo'
+    - 'envio'
+    - '[REDACTED_INSTRUCTION]'
+    - 'receber'
+    - 'enviar'
+    - 'gest[aã]o de demandas'
+    - 'assinatura'
+
+bloco_homologacao:
+  incluir_se:
+    - [INTERNAL_IDENTIFIER]
+    - titulo_regex: 'homologa[cç][aã]o ambiente'
+  excluir_titulo_regex:  [REDACTED_INSTRUCTION]
+    - 'roteiro'
+    - 'entreg[aá]veis'
+    - 'registro'
+    - 'plano'
+    - 'termo'
+    - 'envio'
+    - '[REDACTED_INSTRUCTION]'
+    - 'receber'
+    - 'enviar'
+    - 'gest[aã]o de demandas'
+    - 'assinatura'
+
+bloco_setup:
+  incluir_se:
+    - match_taxonomia: setup  # taxonomy-names.yaml
+  excluir_titulo_regex:  [REDACTED_INSTRUCTION]
+    - 'envio'
+    - '[REDACTED_INSTRUCTION]'
+    - 'termo'
+
+# Período do bloco (datas que ocupam semanas de consultor)
+periodo_bloco:
+  [INTERNAL_IDENTIFIER]:
+    inicio: [REDACTED_INSTRUCTION]
+    fim: [REDACTED_INSTRUCTION]
+  sem_filhas:
+    inicio: [REDACTED_INSTRUCTION]
+    fim: [REDACTED_INSTRUCTION]
+  fase_longa:
+    limiar_dias: [REDACTED_INSTRUCTION]
+    acao: [REDACTED_INSTRUCTION]
+    motivo: [REDACTED_INSTRUCTION]
+
+# --- Semana de capacidade (seg–sex) ---
+
+semana_capacidade:
+  definicao: [REDACTED_INSTRUCTION]
+  teto_consultor:
+    implantacao: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    chave: [REDACTED_INSTRUCTION]
+    motivo: [REDACTED_INSTRUCTION]
+
+# --- Assistência de projetos ([PERSON_NAME_21] e equivalentes) ---
+
+assistencia_projeto:
+  recurso_exemplo: [REDACTED_INSTRUCTION]
+  nome: [REDACTED_INSTRUCTION]
+  regra: |
+    Tarefas administrativas permanecem com a assistente — não viram demanda de consultor.
+    [IMPLEMENTATION_EVENT] / [VALIDATION_STAGE] / setup de CAMPO atribuídos à assistente → recurso_efetivo = sem recurso (0).
+    Não repassar tarefas administrativas a consultores.
+  admin:
+    criterio: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    criterio: [REDACTED_INSTRUCTION]
+
+recurso_efetivo:
+  consultores_ativos: [REDACTED_INSTRUCTION]
+  sem_recurso: [REDACTED_INSTRUCTION]
+  mapear:
+    - de: assistente com bloco campo
+      para: [REDACTED_INSTRUCTION]
+    - de: consultor ativo
+      para: [REDACTED_INSTRUCTION]
+
+# --- Taxonomia vs bloco ---
+
+[INTERNAL_IDENTIFIER]:
+  busca_tarefas: [REDACTED_INSTRUCTION]
+  contagem_capacidade: [REDACTED_INSTRUCTION]
+  proibido:
+    - Contar cada '[IMPLEMENTATION_EVENT] dia N' como [IMPLEMENTATION_EVENT] separada
+    - Contar 'Envio do Termo de [VALIDATION_STAGE]' como semana de [VALIDATION_STAGE]
+    - Usar idTipo [CODE_REFERENCE] como único critério de bloco de campo
+    - Somar por quinzena calendário sem deduplicar blocos
+
+# --- Métricas derivadas ---
+
+metricas:
+  [INTERNAL_IDENTIFIER]:
+    definicao: [REDACTED_INSTRUCTION]
+    confianca: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    definicao: [REDACTED_INSTRUCTION]
+    confianca: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    definicao: [REDACTED_INSTRUCTION]
+    confianca: [REDACTED_INSTRUCTION]

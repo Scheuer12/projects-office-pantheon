@@ -1,0 +1,8 @@
+schema_id: [REDACTED_INSTRUCTION]
+id_pattern: [REDACTED_INSTRUCTION]
+required: [id, process_id, symptom, cause, impact, evidence_ids, criticality]
+criticality: [Blocker, High, Medium]
+rules:
+  - [INTERNAL_IDENTIFIER]: true
+  - [INTERNAL_IDENTIFIER]: true
+  - [INTERNAL_IDENTIFIER]: true

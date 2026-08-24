@@ -1,0 +1,44 @@
+# Autoridade de fontes — Mapping From-To AS IS ↔ TO BE [COMPANY_PRODUCT]
+meta:
+  package: [REDACTED_INSTRUCTION]
+  updated_at: [REDACTED_INSTRUCTION]
+  purpose: [REDACTED_INSTRUCTION]
+
+authority_order:
+  1:
+    id: [COMPANY_INTERNAL_ID]
+    path_hint: [REDACTED_INSTRUCTION]
+    source: [REDACTED_INSTRUCTION]
+    prevails_on_conflict: [REDACTED_INSTRUCTION]
+  2:
+    id: [COMPANY_INTERNAL_ID]
+    path_hint: [REDACTED_INSTRUCTION]
+    note: [REDACTED_INSTRUCTION]
+  3:
+    id: [REDACTED_INSTRUCTION]
+    note: [REDACTED_INSTRUCTION]
+  4:
+    id: [REDACTED_INSTRUCTION]
+    note: [REDACTED_INSTRUCTION]
+  5:
+    id: [REDACTED_INSTRUCTION]
+    note: [REDACTED_INSTRUCTION]
+
+conflict_rule: >
+  Em conflito entre literatura [CODE_REFERENCE] genérica e documentação/práticas [COMPANY_PRODUCT]
+  [REDACTED_INSTRUCTION], prevalece [COMPANY_PRODUCT]. Registrar o conflito
+  e a fonte vencedora no output.
+
+hard_rules:
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+
+board_gate: [REDACTED_INSTRUCTION]
+
+knowledge_base_root_pointer: |
+  [REDACTED_POINTER]

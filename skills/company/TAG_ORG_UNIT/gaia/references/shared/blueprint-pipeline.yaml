@@ -1,0 +1,94 @@
+# Pipeline Blueprint — Gaia
+schema_id: [REDACTED_INSTRUCTION]
+version: [REDACTED_INSTRUCTION]
+
+premise: >
+  Gaia (Analista), subordinada ao PMO (Zeus), usa os agents de blueprint na ordem
+  em que uma analista de processos [CODE_REFERENCE] trabalha: criticidade do levantamento,
+  AS IS factual, storytelling TO BE no [COMPANY_PRODUCT] (acabamento código read-only quando
+  disponível). MappingFromTo só entra com permissão/solicitação do board porque
+  pode alterar a referência TO BE/From-To.
+
+org:
+  reports_to: [REDACTED_INSTRUCTION]
+  display_name: [REDACTED_INSTRUCTION]
+  reports:
+    - papiro
+    - perseu
+    - mapping-from-to
+    - atlas
+
+stages:
+  - id: ST0
+    name: [REDACTED_INSTRUCTION]
+    agent: [REDACTED_INSTRUCTION]
+    skill: [REDACTED_INSTRUCTION]
+  - id: ST1
+    name: [REDACTED_INSTRUCTION]
+    agent: [REDACTED_INSTRUCTION]
+    skill_pack: [REDACTED_INSTRUCTION]
+    entry: [REDACTED_INSTRUCTION]
+    produces: [REDACTED_INSTRUCTION]
+    skip_if: [REDACTED_INSTRUCTION]
+  - id: ST2
+    name: [REDACTED_INSTRUCTION]
+    agent: [REDACTED_INSTRUCTION]
+    skill_pack: [REDACTED_INSTRUCTION]
+    entry: [REDACTED_INSTRUCTION]
+    consumes: [REDACTED_INSTRUCTION]
+    produces: [REDACTED_INSTRUCTION]
+    skip_if: [REDACTED_INSTRUCTION]
+  - id: ST3
+    name: [REDACTED_INSTRUCTION]
+    agent: [REDACTED_INSTRUCTION]
+    skill_pack: [REDACTED_INSTRUCTION]
+    entry: [REDACTED_INSTRUCTION]
+    produces: [REDACTED_INSTRUCTION]
+    board_gated: [REDACTED_INSTRUCTION]
+    default: [REDACTED_INSTRUCTION]
+    run_only_if: [REDACTED_INSTRUCTION]
+    before_mutate_reference: [REDACTED_INSTRUCTION]
+    skip_if: [REDACTED_INSTRUCTION]
+  - id: ST4
+    name: [REDACTED_INSTRUCTION]
+    agent: [REDACTED_INSTRUCTION]
+    skill_pack: [REDACTED_INSTRUCTION]
+    entry: [REDACTED_INSTRUCTION]
+    consumes: [REDACTED_INSTRUCTION]
+    produces: [REDACTED_INSTRUCTION]
+    includes_code_walk: [REDACTED_INSTRUCTION]
+  - id: ST5
+    name: [REDACTED_INSTRUCTION]
+    agent: [REDACTED_INSTRUCTION]
+    skill: [REDACTED_INSTRUCTION]
+
+return_rules:
+  - [INTERNAL_IDENTIFIER]: [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]: return_papiro
+  - [INTERNAL_IDENTIFIER]: [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]: [INTERNAL_IDENTIFIER]
+
+code_walk:
+  owned_by: [REDACTED_INSTRUCTION]
+  access: [REDACTED_INSTRUCTION]
+  optional: [REDACTED_INSTRUCTION]
+  gaia_ensures: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  why: [REDACTED_INSTRUCTION]
+  mutates_tobe_reference: [REDACTED_INSTRUCTION]
+  gaia_may_recommend_and_ask_board: [REDACTED_INSTRUCTION]
+  gaia_may_not_auto_run: [REDACTED_INSTRUCTION]
+  must_show_diff_before_write: [REDACTED_INSTRUCTION]
+
+boundaries:
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - invent_webservice
+    - mutate_[COMPANY_INTERNAL_ID]
+    - auto_homologate
+    - [INTERNAL_IDENTIFIER]
+  bpmn_authored_by: [COMPANY_INTERNAL_ID]
+  bpmn_not_from_client: [REDACTED_INSTRUCTION]

@@ -1,0 +1,43 @@
+schema_id: [REDACTED_INSTRUCTION]
+version: [REDACTED_INSTRUCTION]
+naming_pattern_vault_resolved: [REDACTED_INSTRUCTION]
+
+precision_mode:
+  enum: [A_storytelling, B_implantation]
+  default_when_source_pack_incomplete: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  when_bpmn_or_flu_catalog_present: [REDACTED_INSTRUCTION]
+  when_absent: [REDACTED_INSTRUCTION]
+  forbid_parallel_namespaces_when_project_ids_exist: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  enabled: [REDACTED_INSTRUCTION]
+  forbidden_inference: [REDACTED_INSTRUCTION]
+
+document_sections:
+  - {id: S01, name: objetivo, required: true}
+  - {id: S02, name: asis_contexto, required: true}
+  - {id: S02b, name: ecossistema_sistemas, required: true}
+  - {id: S03, name: storytelling_operacional_[COMPANY_PRODUCT], required: true}
+  - {id: S04, name: [INTERNAL_IDENTIFIER], required: true}
+  - {id: S05, name: integracoes, required: true}
+  - {id: S06, name: sipoc_tecnico, required: true}
+  - {id: S07, name: organizacao_parametrizacao, required: true}
+  - {id: S07b, name: setup_list, [INTERNAL_IDENTIFIER]: B_implantation}
+  - id: S08
+    name: [REDACTED_INSTRUCTION]
+    required: [REDACTED_INSTRUCTION]
+    classifications: [product_improvement_candidate, scope_inaptitude, config_discovery, evidence_gap]
+  - {id: S09, name: glossario, required: true}
+  - {id: S10, name: historico_revisoes, required: true}
+  - {id: S11, name: [INTERNAL_IDENTIFIER], required: true}
+
+status_enum: [DRAFT_BLOCKED, DRAFT_READY_FOR_VALIDATION, VALIDATED_BY_CLIENT]
+missing_value_tokens: ["Não definido", "A confirmar", "não informado"]
+commercial_content_forbidden: [REDACTED_INSTRUCTION]
+flowchart_required: [REDACTED_INSTRUCTION]
+alice_kb_required: [REDACTED_INSTRUCTION]
+invent_webservice_forbidden: [REDACTED_INSTRUCTION]
+compare_enrich_when_existing_tobe: [REDACTED_INSTRUCTION]
+must_not_claim_official_replacement_of_analyst_tobe_without_human_auth: [REDACTED_INSTRUCTION]

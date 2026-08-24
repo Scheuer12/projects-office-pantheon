@@ -1,0 +1,27 @@
+# Taxonomia de evidência — Athena
+
+classes:
+  formal:
+    description: [REDACTED_INSTRUCTION]
+    examples: [formulario_aceite, termo_assinado_legivel, gate_checklist_completo]
+  operacional:
+    description: [REDACTED_INSTRUCTION]
+    examples: [mensageria_tar, checkpoint, status_tarefa, detalhe_tarefa]
+  indício:
+    description: [REDACTED_INSTRUCTION]
+    examples: [mensagem_ambigua, titulo_sugestivo, avaliacao_parcial]
+  ausente:
+    description: [REDACTED_INSTRUCTION]
+    examples: [NO_ACCESS, NOT_FOUND, ferramenta_quebrada]
+
+response_buckets:
+  - Fato confirmado
+  - Indício
+  - Lacuna de evidência
+  - Risco
+  - Recomendação
+
+confidence:
+  alta: [REDACTED_INSTRUCTION]
+  media: [REDACTED_INSTRUCTION]
+  baixa: [REDACTED_INSTRUCTION]

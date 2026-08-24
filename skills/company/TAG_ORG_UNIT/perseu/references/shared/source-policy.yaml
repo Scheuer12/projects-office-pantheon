@@ -1,0 +1,30 @@
+# Política de fontes — Perseu
+meta:
+  agent: [REDACTED_INSTRUCTION]
+  policy: [REDACTED_INSTRUCTION]
+  updated_at: [REDACTED_INSTRUCTION]
+
+read_only_default: [REDACTED_INSTRUCTION]
+external_mutation_requires: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+
+[INTERNAL_IDENTIFIER]:
+  - [OUTBOUND_ACTION]
+  - post_tar
+  - put_tar
+  - patch_tar
+  - delete_tar
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+
+never:
+  - invent_facts
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]

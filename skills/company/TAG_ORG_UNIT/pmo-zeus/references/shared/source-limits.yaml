@@ -1,0 +1,18 @@
+# Limites herdados — Zeus não inventa fonte
+
+meta:
+  package: [REDACTED_INSTRUCTION]
+  inherits:
+    - ../Cronos/skills/shared/resource-types.yaml  # so via [REDACTED_INSTRUCTION]
+    - ../Athena/skills/shared/source-limits.yaml
+
+zeus:
+  read_only_default: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_API_METHOD]*
+    - [INTERNAL_API_METHOD]*
+    - [INTERNAL_API_METHOD]*
+    - [INTERNAL_API_METHOD]*
+  brain:
+    no_embed_team_roster: [REDACTED_INSTRUCTION]
+    no_embed_pop_body: [REDACTED_INSTRUCTION]

@@ -1,0 +1,49 @@
+# Reconciliação provisório × template oficial
+# Não inventa equivalência normativa; apenas reporta diferenças e pede aceite humano.
+
+meta:
+  authority: [REDACTED_INSTRUCTION]
+  normative: [REDACTED_INSTRUCTION]
+  auto_rename_forbidden: [REDACTED_INSTRUCTION]
+  auto_migrate_forbidden: [REDACTED_INSTRUCTION]
+
+inputs:
+  provisional_schema: [REDACTED_INSTRUCTION]
+  official_template: [REDACTED_INSTRUCTION]
+
+match_strategy:
+  coincident:
+    description: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    description: >
+      Mesmo name/id com label distinto, OU match explícito informado pelo operador
+      em mapping_hints [REDACTED_INSTRUCTION].
+  [INTERNAL_IDENTIFIER]:
+    description: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    description: [REDACTED_INSTRUCTION]
+  breaking_changes:
+    description: >
+      Remoção, fusão, cisão, mudança de cardinalidade ou incompatibilidade de
+      significado declarada — exige aceite humano antes de qualquer migração
+
+[INTERNAL_IDENTIFIER]:
+  - coincident_fields
+  - [INTERNAL_IDENTIFIER]
+  - missing_fields
+  - extra_fields
+  - breaking_changes
+  - migration_recommendation
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]: true
+
+migration_recommendation:
+  status_default: [REDACTED_INSTRUCTION]
+  may_include:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  may_not:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]

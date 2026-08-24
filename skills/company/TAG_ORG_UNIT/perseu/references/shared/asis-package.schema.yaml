@@ -1,0 +1,67 @@
+schema_id: [REDACTED_INSTRUCTION]
+version: [REDACTED_INSTRUCTION]
+required:
+  - schema
+  - project
+  - executive_summary
+  - operational_profile
+  - process_sheets
+  - systems_inventory
+  - systems_integrations
+  - bottlenecks
+  - gaps
+  - completeness
+  - coverage
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - revision_history
+  - validation
+  - status
+
+systems_inventory:
+  schema_ref: [REDACTED_INSTRUCTION]
+  required: [REDACTED_INSTRUCTION]
+  note: >
+    [REDACTED_INSTRUCTION] de TODOS os sistemas citados ([EXTERNAL_SYSTEM], [EXTERNAL_SYSTEM]/vendas, fiscal, [EXTERNAL_FLOW],
+    [EXTERNAL_CHANNEL]s, [CODE_REFERENCE] legado, migração futura, controles paralelos).
+    Nunca colapsar a operação em um único [EXTERNAL_SYSTEM] sem evidência.
+
+completeness_object:
+  required:
+    - structural_completeness
+    - evidence_completeness
+    - process_coverage
+    - blocker_status
+    - ecosystem_coverage
+  [INTERNAL_IDENTIFIER]:
+    method_id: [REDACTED_INSTRUCTION]
+    authority: [REDACTED_INSTRUCTION]
+    normative: [REDACTED_INSTRUCTION]
+    awaiting_business_validation: [REDACTED_INSTRUCTION]
+  notes:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+
+status_enum:
+  - DRAFT_BLOCKED
+  - DRAFT_READY_FOR_VALIDATION
+  - VALIDATED_BY_CLIENT
+validated_by_client_requires: [REDACTED_INSTRUCTION]
+naming_pattern_vault_resolved: [REDACTED_INSTRUCTION]
+
+docx_generation:
+  enabled: [REDACTED_INSTRUCTION]
+  reason: [REDACTED_INSTRUCTION]
+  enable_when:
+    - [INTERNAL_IDENTIFIER]: true
+    - template_versioned: true
+    - [INTERNAL_IDENTIFIER]: true
+  until_then:
+    - [INTERNAL_IDENTIFIER]: true
+    - [INTERNAL_IDENTIFIER]: true
+
+[INTERNAL_IDENTIFIER]:
+  require_systems_inventory_in_asis: [REDACTED_INSTRUCTION]
+  seed_source_pack_ecosystem_from_inventory: [REDACTED_INSTRUCTION]

@@ -1,0 +1,69 @@
+# schema: [COMPANY_PRODUCT].handoff-tobe.v1
+schema_id: [REDACTED_INSTRUCTION]
+version: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  - schema
+  - asis_ref
+  - project
+  - release_gate
+  - mapping_ref
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - source_pack
+
+fields:
+  schema: [REDACTED_INSTRUCTION]
+  asis_ref:
+    required: [asis_package_path_or_inline, asis_status]
+    properties:
+      asis_status:
+        enum: [DRAFT_READY_FOR_VALIDATION, VALIDATED_BY_CLIENT]
+      asis_package_path_or_inline: [REDACTED_INSTRUCTION]
+  project:
+    required: [client_name, operational_profiles]
+  mapping_ref:
+    required: [present]
+    properties:
+      present: [REDACTED_INSTRUCTION]
+      mapping_pack_path_or_inline: [REDACTED_INSTRUCTION]
+  source_pack:
+    schema_ref: [REDACTED_INSTRUCTION]
+    required: [precision_mode, sources_present, ecosystem_systems]
+    properties:
+      precision_mode: [REDACTED_INSTRUCTION]
+      sources_present: [REDACTED_INSTRUCTION]
+      ecosystem_systems:
+        type: [REDACTED_INSTRUCTION]
+        items:
+          required: [system_id, name, role_in_operation]
+      bpmn_flu_ids: [REDACTED_INSTRUCTION]
+      mcp_snapshot_ref: [REDACTED_INSTRUCTION]
+      existing_tobe_ref: [REDACTED_INSTRUCTION]
+      incomplete_declared: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    type: [REDACTED_INSTRUCTION]
+    items:
+      required: [id, severity, classification, description]
+      properties:
+        classification:
+          enum: [product_improvement_candidate, scope_inaptitude, config_discovery, evidence_gap]
+        severity: [REDACTED_INSTRUCTION]
+        owner_hint: [REDACTED_INSTRUCTION]
+  future_items_quarantine: [REDACTED_INSTRUCTION]
+  release_gate:
+    required: [ready_for_tobe, blockers]
+    properties:
+      ready_for_tobe: [REDACTED_INSTRUCTION]
+      blockers: [REDACTED_INSTRUCTION]
+      notes: [REDACTED_INSTRUCTION]
+      precision_mode: [REDACTED_INSTRUCTION]
+
+rules:
+  - never_start_atlas_if_asis_DRAFT_BLOCKED
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - storytelling_only_in_[COMPANY_INTERNAL_ID]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]

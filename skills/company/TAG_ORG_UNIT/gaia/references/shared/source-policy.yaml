@@ -1,0 +1,19 @@
+meta:
+  agent: [REDACTED_INSTRUCTION]
+  reports_to: [REDACTED_INSTRUCTION]
+  policy: [REDACTED_INSTRUCTION]
+read_only_default: [REDACTED_INSTRUCTION]
+sbrain_vault: [REDACTED_INSTRUCTION]
+brain_root_pointer: [REDACTED_INSTRUCTION]
+local_filesystem_fallback: [REDACTED_INSTRUCTION]
+external_mutation_requires: [REDACTED_INSTRUCTION]
+[INTERNAL_IDENTIFIER]:
+  - [OUTBOUND_ACTION]
+  - [INTERNAL_IDENTIFIER]
+  - wms_write
+  - mutate_[COMPANY_INTERNAL_ID]
+never:
+  - invent_facts
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]

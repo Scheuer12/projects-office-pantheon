@@ -1,0 +1,52 @@
+# Limites de fonte — Athena (read-only)
+
+meta:
+  policy: [REDACTED_INSTRUCTION]
+  package: [REDACTED_INSTRUCTION]
+  updated_at: [REDACTED_INSTRUCTION]
+
+tar_mcp:
+  allowed_get:
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]   # somente por id de tarefa
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_API_METHOD]      # quebrado / não confiável
+    - [INTERNAL_IDENTIFIER]  # falham backend
+  forbidden_write:
+    - [INTERNAL_API_METHOD]*
+    - [INTERNAL_API_METHOD]*
+    - [INTERNAL_API_METHOD]*
+    - [INTERNAL_API_METHOD]*
+  notes:
+    - "Checkpoints: apenas GetCheckPointTarefa por idTarefa"
+    - "Decodificar base64 em campos quando necessário"
+    - "Paginar; limitar volume; não dump global"
+
+m365:
+  label: [REDACTED_INSTRUCTION]
+  works:
+    - listagem_sites
+    - [INTERNAL_IDENTIFIER]
+    - leitura_excel
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_IDENTIFIER]
+    - leitura_docx
+    - [COMM_CHANNEL]
+    - [REDACTED_INSTRUCTION]
+  rule: >
+    Só citar conteúdo se a tool retornar texto/células legíveis.
+    Caso contrário NO_ACCESS / PARCIAL / INSUFICIENTE — nunca inventar.
+
+[INTERNAL_IDENTIFIER]:
+  - aceite_formal
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - anexo_tar

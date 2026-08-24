@@ -1,0 +1,16 @@
+# Procedimento esperado — chamado de atualização (heurística)
+
+identificacao:
+  flag_estruturada: [REDACTED_INSTRUCTION]
+  usar: [tipo_tarefa, titulo, descricao, mensageria]
+  confianca_sem_tipo_padronizado: [REDACTED_INSTRUCTION]
+
+passos_esperados:
+  - Tecnologia cria chamado de atualização
+  - Consultor agenda com cliente
+  - Consultor lê patch notes (quando disponíveis)
+  - Consultor realiza agenda de [METRIC]
+  - Consultor executa atualização com cliente
+  - Consultor testa funções atualizadas
+  - Consultor finaliza chamado
+  - Se problema/insatisfação: registra, rollback se necessário, devolve Tecnologia

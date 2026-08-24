@@ -1,0 +1,75 @@
+# Completude — dimensões separadas (interpretação interna, não fórmula oficial do POP)
+schema_id: [REDACTED_INSTRUCTION]
+
+dimensions:
+  structural_completeness:
+    meaning: [REDACTED_INSTRUCTION]
+    counts_not_informed_as_present: [REDACTED_INSTRUCTION]
+    note: >
+      "não informado" conta como campo estruturalmente presente.
+      Campo ausente da ficha/seção reduz structural_completeness.
+
+  evidence_completeness:
+    meaning: [REDACTED_INSTRUCTION]
+    method_id: [REDACTED_INSTRUCTION]
+    authority: [REDACTED_INSTRUCTION]
+    normative: [REDACTED_INSTRUCTION]
+    awaiting_business_validation: [REDACTED_INSTRUCTION]
+    prohibit_claim_as_official_pop_formula: [REDACTED_INSTRUCTION]
+    counting:
+      confirmed_or_corroborated: [REDACTED_INSTRUCTION]
+      client_claim: [REDACTED_INSTRUCTION]
+      not_informed: [REDACTED_INSTRUCTION]
+      na:
+        [INTERNAL_IDENTIFIER]:
+          justification_recorded: [REDACTED_INSTRUCTION]
+          applicable_source_present: [REDACTED_INSTRUCTION]
+        otherwise: [REDACTED_INSTRUCTION]
+    formula_note: >
+      Interpretação interna provisória: informed_fields / applicable_fields * 100.
+      Não é fórmula oficial do POP. Sujeita a validação de negócio.
+
+  process_coverage:
+    labels: [mapped, partial, unmapped]
+    rules:
+      unmapped: [REDACTED_INSTRUCTION]
+      partial: [REDACTED_INSTRUCTION]
+      mapped: >
+        Estrutura completa E evidência informacional nos campos aplicáveis
+        [REDACTED_INSTRUCTION]
+      score_may_not_promote_partial_to_mapped: [REDACTED_INSTRUCTION]
+
+  blocker_status:
+    independent_of_scores: [REDACTED_INSTRUCTION]
+    meaning: [REDACTED_INSTRUCTION]
+
+  ecosystem_coverage:
+    meaning: [REDACTED_INSTRUCTION]
+    labels: [complete, partial, [EXTERNAL_SYSTEM]_only_risk, unmapped]
+    rules:
+      [EXTERNAL_SYSTEM]_only_risk: [REDACTED_INSTRUCTION]
+      complete: [REDACTED_INSTRUCTION]
+      score_may_not_hide_missing_order_hub: [REDACTED_INSTRUCTION]
+
+score_guards:
+  [INTERNAL_IDENTIFIER]:
+    - eliminate_blocker
+    - authorize_tobe
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  score_may_not_override_blockers: [REDACTED_INSTRUCTION]
+  high_evidence_completeness_with_blocker: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  - caracterizacao
+  - resumo_executivo
+  - perfil_operacional
+  - fichas_processo
+  - [INTERNAL_IDENTIFIER]
+  - systems_inventory
+  - gargalos
+  - lacunas_pendencias
+  - encerramento
+  - controle_versoes
+
+range: [0, 100]

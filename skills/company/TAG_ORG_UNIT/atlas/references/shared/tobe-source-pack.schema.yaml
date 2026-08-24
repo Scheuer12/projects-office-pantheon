@@ -1,0 +1,97 @@
+# Pacote mínimo de fontes para TO BE preciso — Atlas
+# Lição [PROJECT_CLIENT_3]: AS IS sozinho → TO BE [EXTERNAL_SYSTEM_7]-only incompleto
+#
+# Autoria:
+# - AS IS / levantamento: cliente + Papiro/Perseu
+# - BPMN TO BE / catálogo FLU / Termo TO BE: construídos pela analista [COMPANY_PRODUCT] ([ORG_UNIT]),
+#   NÃO são entregáveis do cliente. Entram no source pack como artefatos internos
+#   de desenho quando já existirem no projeto.
+
+schema_id: [REDACTED_INSTRUCTION]
+version: [REDACTED_INSTRUCTION]
+
+precision_modes:
+  A_storytelling:
+    description: [REDACTED_INSTRUCTION]
+    min_sources:
+      - asis_package
+      - alice_kb
+    optional_boosters: [mapping_pack]
+  B_implantation:
+    description: >
+      TO BE alinhado a artefatos de desenho da analista (BPMN/FLU/ata TO BE/[REDACTED_INSTRUCTION]).
+      BPMN é [ENVIRONMENT] [COMPANY_PRODUCT] (analista), não input do cliente.
+    min_sources:
+      - asis_package
+      - alice_kb
+      - [INTERNAL_IDENTIFIER]: [[INTERNAL_IDENTIFIER], [INTERNAL_IDENTIFIER], [INTERNAL_IDENTIFIER]]
+      - [INTERNAL_IDENTIFIER]: [[REDACTED_INSTRUCTION], [INTERNAL_IDENTIFIER]]
+    [INTERNAL_IDENTIFIER]:
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+
+source_kinds:
+  asis_package:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [REDACTED_INSTRUCTION]
+  alice_kb:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [COMPANY_INTERNAL_ID]
+  mapping_pack:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [COMPANY_INTERNAL_ID]
+    unlocks: [ecosystem_decisions, rollout_order, pending_owners]
+  [INTERNAL_IDENTIFIER]:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [COMPANY_INTERNAL_ID]
+    not_from_client: [REDACTED_INSTRUCTION]
+    note: >
+      BPMN TO BE (.eddx etc.) e catálogo FLU000+ são elaborados pela analista
+      de processos [COMPANY_PRODUCT]. Não solicitar ao cliente como entrega de levantamento.
+    unlocks: [flu_id_alignment, status_machines]
+  [INTERNAL_IDENTIFIER]:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [COMPANY_INTERNAL_ID]
+    not_from_client: [REDACTED_INSTRUCTION]
+    unlocks: [compare_enrich_not_replace]
+  [REDACTED_INSTRUCTION]:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [COMPANY_INTERNAL_ID]
+    unlocks: [named_webservices]
+  [INTERNAL_IDENTIFIER]:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [COMPANY_INTERNAL_ID]
+    unlocks: [int_status_developed_pending]
+  [COMPANY_INTERNAL_ID]:
+    required_always: [REDACTED_INSTRUCTION]
+    authored_by: [COMPANY_INTERNAL_ID]
+    not_from_client: [REDACTED_INSTRUCTION]
+    access: [REDACTED_INSTRUCTION]
+    note: >
+      Path/workspace do código [COMPANY_PRODUCT] ou equivalente. Usado por atlas-codebase-refiner
+      para acabamento do storytelling e fechamento de lacunas code-answerable.
+      Nunca mutar o repositório. Indisponível = skip declarado, não Blocker de levantamento.
+    unlocks: [code_walk_refine, close_code_answerable_gaps]
+
+rules:
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - if_only_asis_present_then_precision_mode_A_and_declare_source_pack_incomplete
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+
+gate:
+  ready_for_precision_B:
+    requires: [REDACTED_INSTRUCTION]
+  otherwise:
+    status_note: [REDACTED_INSTRUCTION]
+    must_declare_lacuna: [REDACTED_INSTRUCTION]

@@ -1,0 +1,35 @@
+# Léxico de contaminação futura (TO BE / desejo / solução)
+# Não acionar Atlas; quarentenar apenas.
+patterns_pt:
+  - deverá
+  - deverão
+  - será
+  - serão
+  - ideal
+  - seria ideal
+  - gostaríamos
+  - gostaria
+  - pretende
+  - pretendemos
+  - a desenvolver
+  - a ser desenvolvido
+  - sugestão
+  - sugerimos
+  - poderia
+  - recomend
+  - parametriz
+  - no futuro
+  - futuramente
+  - wish list
+  - melhoria proposta
+  - solução proposta
+
+classifications:
+  - hypothesis
+  - desire
+  - future_solution
+
+action:
+  remove_from_current_state_body: [REDACTED_INSTRUCTION]
+  store_in: [REDACTED_INSTRUCTION]
+  do_not_create_atlas: [REDACTED_INSTRUCTION]

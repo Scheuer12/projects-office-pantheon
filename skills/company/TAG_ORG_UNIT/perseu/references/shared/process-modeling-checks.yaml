@@ -1,0 +1,30 @@
+required_elements:
+  - inicio
+  - fim
+  - gatilho
+  - entrada
+  - saida
+  - responsavel
+  - atores
+  - sistemas
+  - documentos
+  - sequencia
+  - decisoes
+  - criterios
+  - excecoes
+  - loops
+  - handoffs
+  - status
+  - controles
+  - kpi
+  - fontes
+
+defect_signals:
+  - passo_orfao
+  - dead_end
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]

@@ -1,0 +1,36 @@
+# Taxonomia de evidência — [COMPANY_PRODUCT].evidence.v1
+classifications:
+  confirmed:
+    meaning: [REDACTED_INSTRUCTION]
+  client_claim:
+    meaning: [REDACTED_INSTRUCTION]
+  corroborated:
+    meaning: [REDACTED_INSTRUCTION]
+  indication:
+    meaning: [REDACTED_INSTRUCTION]
+  conflict:
+    meaning: [REDACTED_INSTRUCTION]
+  not_informed:
+    meaning: [REDACTED_INSTRUCTION]
+  physical_validation:
+    meaning: [REDACTED_INSTRUCTION]
+
+confidence: [high, medium, low]
+
+[INTERNAL_IDENTIFIER]:
+  - source_id
+  - path
+  - sha256
+  - type
+  - authority
+  - locator
+  - process_id
+  - assertion
+  - classification
+  - confidence
+  - extraction_date
+  - validation_owner
+
+note: >
+  sha256 é obrigatório quando o arquivo for legível localmente;
+  se indisponível, registrar not_informed no campo hash e não inventar.

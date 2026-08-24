@@ -1,0 +1,20 @@
+# Sanitized ecosystem rules.
+# Specific external systems, categories, and industry examples were removed.
+
+system_inventory:
+  required: true
+  fields:
+    - [SYSTEM_ROLE]
+    - [OWNER_OR_SOURCE]
+    - [EVIDENCE_ANCHOR]
+    - [CONFIDENCE]
+
+rules:
+  do_not_collapse_ecosystem_into_single_system: true
+  mark_missing_count[EXTERNAL_SYSTEM]arty_as_gap: true
+  require_evidence_for_active_integration: true
+
+labels:
+  - [SYSTEM_CATEGORY_1]
+  - [SYSTEM_CATEGORY_2]
+  - [SYSTEM_CATEGORY_3]

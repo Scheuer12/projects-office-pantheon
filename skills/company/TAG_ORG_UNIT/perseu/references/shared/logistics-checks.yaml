@@ -1,0 +1,12 @@
+# Sanitized domain checklist.
+# The original domain-specific taxonomy was removed for portfolio publication.
+
+domains:
+  [DOMAIN_BLOCK_1]: [[CHECKPOINT_1], [CHECKPOINT_2], [CHECKPOINT_3]]
+  [DOMAIN_BLOCK_2]: [[CHECKPOINT_4], [CHECKPOINT_5], [CHECKPOINT_6]]
+  [DOMAIN_BLOCK_3]: [[CHECKPOINT_7], [CHECKPOINT_8], [CHECKPOINT_9]]
+
+rules:
+  require_evidence: true
+  do_not_infer_from_generic_terms: true
+  unresolved_domain_item: [REDACTED_INSTRUCTION]

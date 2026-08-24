@@ -1,0 +1,126 @@
+# Eixos de projeto — Complexidade e Sensibilidade
+# Contrato compartilhado entre agentes de análise, insight e recomendação.
+# Premissas detalhadas de impacto: skill futura [COMPANY_PRODUCT]-pm-project-doctrine (gestor).
+
+meta:
+  version: [REDACTED_INSTRUCTION]
+  status: [REDACTED_INSTRUCTION]
+  doctrine_skill: [REDACTED_INSTRUCTION]
+  escala: [REDACTED_INSTRUCTION]
+
+# --- Definições ---
+
+definicoes:
+  complexidade:
+    escopo: [REDACTED_INSTRUCTION]
+    descricao: >
+      Grau de dificuldade operacional e de entregáveis do projeto ([SYSTEM_LINKS],
+      volume de escopo, maturidade do cliente, dependências técnicas).
+    escala: [REDACTED_INSTRUCTION]
+  sensibilidade:
+    escopo: [REDACTED_INSTRUCTION]
+    descricao: >
+      Grau de exposição a churn, reputação, contrato ou tolerância do cliente
+      a mudanças de cronograma — [REDACTED_INSTRUCTION].
+    escala: [REDACTED_INSTRUCTION]
+
+# --- Contrato ProjectAxes (obrigatório no snapshot e outputs analíticos) ---
+
+ProjectAxes:
+  sprint_id: [REDACTED_INSTRUCTION]
+  sprint_titulo: [REDACTED_INSTRUCTION]
+  complexidade: [REDACTED_INSTRUCTION]
+  sensibilidade: [REDACTED_INSTRUCTION]
+  fonte: [REDACTED_INSTRUCTION]
+  atualizado_em: [REDACTED_INSTRUCTION]
+
+validacao:
+  complexidade_range: [1, 10]
+  sensibilidade_range: [1, 10]
+  se_null: >
+    Agentes de análise/recomendação devem declarar "eixos não informados" para
+    o sprint e NÃO assumir 5/5 silenciosamente. Management Advisor: PARCIAL;
+    recomendações de mover [IMPLEMENTATION_EVENT] → exigir confirmação humana dos eixos.
+
+# --- Fonte de dados (até doctrine + cadastro formal) ---
+
+fonte_dados:
+  primaria_planejada: [REDACTED_INSTRUCTION]
+  override_manual: [REDACTED_INSTRUCTION]
+  tar_campo: [REDACTED_INSTRUCTION]
+
+# Overrides manuais (exemplo — preencher por gestão)
+# Quando vazio, Reader propaga complexidade/sensibilidade = null
+
+overrides_por_sprint: {}
+  # 1014:
+  #   complexidade: 7
+  #   sensibilidade: 8
+  #   fonte: gestao
+  #   nota: "[PROJECT_CLIENT_1] — cliente sensível a prazo"
+
+# --- Agentes obrigados a consumir e propagar ---
+
+agentes_consumidores:
+  obrigatorio:
+    - [COMPANY_PRODUCT]-pm-tar-reader          # inclui no ProjectSnapshot.sprints[]
+    - [COMPANY_PRODUCT]-pm-schedule-controller  # pondera risco/ameaça; declara na saída
+    - [COMPANY_PRODUCT]-pm-workload-controller  # pondera capacidade e redistribuição
+    - [COMPANY_PRODUCT]-pm-management-advisor   # pondera trade-offs e contingência
+  validacao:
+    - [COMPANY_PRODUCT]-pm-response-monitor
+    - [COMPANY_PRODUCT]-pm-fallback-agent
+  futuro:
+    - [COMPANY_PRODUCT]-pm-qualitative-analyzer
+    - [COMPANY_PRODUCT]-pm-pmo-agent
+
+# --- Heurísticas provisórias (até [COMPANY_PRODUCT]-pm-project-doctrine) ---
+# Exemplos alinhados ao gestor — NÃO substituem a skill de premissas.
+
+heuristicas_provisorias:
+  complexidade_alta:
+    limiar: [REDACTED_INSTRUCTION]
+    efeitos:
+      - "Maior importância de entregáveis completos antes de [IMPLEMENTATION_EVENT]"
+      - "[VALIDATION_STAGE] e documentação menos negociáveis para corte"
+      - "Score de ameaça ao prazo pode ser reponderado (+peso) em Schedule"
+  sensibilidade_alta:
+    limiar: [REDACTED_INSTRUCTION]
+    efeitos:
+      - "Evitar alteração de cronograma de [IMPLEMENTATION_EVENT]/[RELEASE_DECISION]"
+      - "Mobilidade de [IMPLEMENTATION_EVENT] trata como muito_baixa reforçada"
+      - "Comunicação e aprovação humana antes de qualquer movimento de campo"
+  ambos_altos:
+    condicao: [REDACTED_INSTRUCTION]
+    efeitos:
+      - "Management Advisor: veredicto mínimo ATENÇÃO em conflito de capacidade"
+      - "Priorizar proteção de margem e qualidade sobre velocidade"
+  eixos_ausentes:
+    efeitos:
+      - "Não recomendar mover [IMPLEMENTATION_EVENT] sem eixos confirmados"
+      - "Declarar PARCIAL em recomendações estratégicas"
+
+# --- Modificadores na matriz de mobilidade (Management Advisor) ---
+
+mobilidade_modificadores:
+  [INTERNAL_IDENTIFIER]:
+    implantacao_go_live_cutover: [REDACTED_INSTRUCTION]
+    homologacao_final: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    documentacao_interna: [REDACTED_INSTRUCTION]
+    levantamento_diagnostico: [REDACTED_INSTRUCTION]
+
+# --- Propagação no pipeline ---
+
+propagacao:
+  reader:
+    acao: [REDACTED_INSTRUCTION]
+    campo_snapshot: [REDACTED_INSTRUCTION]
+  schedule_workload:
+    acao: [REDACTED_INSTRUCTION]
+    acao_score: [REDACTED_INSTRUCTION]
+  management_advisor:
+    acao: [REDACTED_INSTRUCTION]
+    obrigatorio_tabela: [REDACTED_INSTRUCTION]
+  monitor:
+    acao: [REDACTED_INSTRUCTION]

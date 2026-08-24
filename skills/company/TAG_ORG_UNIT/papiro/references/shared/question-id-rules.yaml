@@ -1,0 +1,37 @@
+# IDs determinísticos de perguntas do questionário (gerados; documento original intacto)
+meta:
+  authority: [REDACTED_INSTRUCTION]
+  normative: [REDACTED_INSTRUCTION]
+  purpose: >
+    Questionários oficiais não possuem IDs estáveis por pergunta.
+    Papiro gera IDs rastreáveis sem alterar o DOCX-fonte.
+
+id_format: [REDACTED_INSTRUCTION]
+
+components:
+  profile_slug: [REDACTED_INSTRUCTION]
+  section_slug: [REDACTED_INSTRUCTION]
+  position: [REDACTED_INSTRUCTION]
+  source_hash12: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  - source_id
+  - locator
+  - source_hash
+
+versioning:
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]: [INTERNAL_IDENTIFIER]
+  [INTERNAL_IDENTIFIER]:
+    - same_profile
+    - [INTERNAL_IDENTIFIER]
+    - same_position
+    - [INTERNAL_IDENTIFIER]: true
+  collision_policy: [REDACTED_INSTRUCTION]
+
+forbidden:
+  - [INTERNAL_IDENTIFIER]
+  - random_uuids
+  - [INTERNAL_IDENTIFIER]

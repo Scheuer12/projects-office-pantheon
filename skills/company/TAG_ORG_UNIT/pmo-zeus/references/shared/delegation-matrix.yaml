@@ -1,0 +1,77 @@
+# Roteamento Zeus — intenções, não conteúdo de negócio
+
+lanes:
+  cronos:
+    when:
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - remanejamento_agenda
+      - [INTERNAL_IDENTIFIER]
+    package: [REDACTED_INSTRUCTION]
+  athena:
+    when:
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - governanca_qualitativa
+    package: [REDACTED_INSTRUCTION]
+  gaia:
+    when:
+      - blueprint_wms
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+    note: [REDACTED_INSTRUCTION]
+  userdatahunter:
+    when:
+      - [INTERNAL_IDENTIFIER]
+      - [[ENV_VAR]]_schema_payload
+  portfolio:
+    when:
+      - [INTERNAL_IDENTIFIER]
+      - relatorio_gerencial
+      - kickoff_planejamento
+    package: [REDACTED_INSTRUCTION]
+  both:
+    when:
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - prorrogacao_fase
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+  [CODE_REFERENCE]:
+    when:
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+  human:
+    when:
+      - write_wms
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+  [INTERNAL_IDENTIFIER]:
+    when:
+      - [INTERNAL_IDENTIFIER]
+      - mensageria_tar
+      - notificacao_teams
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+      - [INTERNAL_IDENTIFIER]
+    package: [REDACTED_INSTRUCTION]
+    mode: [REDACTED_INSTRUCTION]
+
+rules:
+  - Zeus nao implementa field-blocks nem remanejamento
+  - Zeus nao interpreta CSAT/mensageria no lugar da Athena
+  - Zeus nao faz IC de blueprint no lugar da Gaia
+  - [AGENT_PLATFORM] Gaia != Analista humano (Time Atual); nao remanejar [CODE_REFERENCE] humano
+  - Conteudo POP/equipe sempre via [REDACTED_INSTRUCTION]
+  - Acoes e comunicacoes operacionais: planejar e executar via [REDACTED_INSTRUCTION]
+  - [CODE_REFERENCE] mensageria operacional ZC-* e executavel no [AGENT_PLATFORM]; [REDACTED_INSTRUCTION] envia se tool existir [REDACTED_INSTRUCTION]
+  - Outbound ZC [CODE_REFERENCE]/[REDACTED_INSTRUCTION] permanece Zeus only
+  - [CODE_REFERENCE] write e autorizacao de escopo/implantacao continuam humanos

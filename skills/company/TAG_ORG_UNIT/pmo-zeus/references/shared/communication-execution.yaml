@@ -1,0 +1,58 @@
+# Bindings de execucao operacional - Zeus / [AGENT_PLATFORM]
+# [CODE_REFERENCE] write permanece proibido. [CODE_REFERENCE] mensageria e [COMM_CHANNEL] (quando tool existir) sao permitidos.
+
+mode: [REDACTED_INSTRUCTION]
+read_only_default: [REDACTED_INSTRUCTION]
+[ENV_VAR]: true
+
+policy:
+  require_unique_task: [REDACTED_INSTRUCTION]
+  require_time_atual_for_people: [REDACTED_INSTRUCTION]
+  forbid_wms_write: [REDACTED_INSTRUCTION]
+  forbid_scope_or_go_live_authorization: [REDACTED_INSTRUCTION]
+  on_ambiguous: [REDACTED_INSTRUCTION]
+  teams_if_missing_tool: [REDACTED_INSTRUCTION]
+
+tar:
+  read_tools:
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+    - [INTERNAL_API_METHOD]
+  write_tools:
+    preferred: [INTERNAL_API_METHOD]
+    fallback: [INTERNAL_API_METHOD]
+  [INTERNAL_IDENTIFIER]:
+    required:
+      - id          # idTarefa
+      - mensagem
+    optional:
+      - idDestinatario
+      - nomeDestinatario
+      - idRemetente
+      - [INTERNAL_IDENTIFIER]
+      - identificadorConversa
+      - identificadorAtendedor
+  tipagem:
+    resolve_before_use: [REDACTED_INSTRUCTION]
+    never_invent_idTipoMensagem: [REDACTED_INSTRUCTION]
+    if_unresolved: [REDACTED_INSTRUCTION]
+
+[REDACTED_INSTRUCTION]:
+  required_capability: [REDACTED_INSTRUCTION]
+  # MCP [DOCUMENT_PLATFORM] atual (files/excel/word/sharepoint) NAO cobre chat [COMM_CHANNEL].
+  # Quando uma tool de envio for ligada ao agent [AGENT_PLATFORM], preencher below.
+  send_tools: []
+  missing_tool_behavior: [REDACTED_INSTRUCTION]
+
+role_resolution:
+  source: [REDACTED_INSTRUCTION]
+  roles:
+    - Assistente de Projetos
+    - Gerente de Projetos (PMO)
+    - Lider de Projetos
+    - Lider
+    - Consultor
+    - Recurso Designado
+
+receipt_required: [REDACTED_INSTRUCTION]

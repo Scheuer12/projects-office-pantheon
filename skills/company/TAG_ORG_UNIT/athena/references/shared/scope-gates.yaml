@@ -1,0 +1,25 @@
+# Escopo e gates — Athena
+
+blueprint:
+  fase: [REDACTED_INSTRUCTION]
+  etapas_dentro_da_fase: [AS IS, TO BE]
+  regra_tarefa: >
+    Fase tem tarefa no [CODE_REFERENCE]; etapa (AS IS/TO BE) não exige tarefa autônoma obrigatória.
+
+[INTERNAL_IDENTIFIER]:
+  regra: >
+    Nenhum desenvolvimento, melhoria ou personalização deve passar pelo TO BE assinado
+    sem estar previsto, classificado ou registrado.
+  se_mudanca_to_be_fora_da_fase: [REDACTED_INSTRUCTION]
+
+gate_avanco:
+  requer:
+    - entregavel_requerido
+    - [INTERNAL_IDENTIFIER]
+  sem_evidencia_formal_acessivel: >
+    Retornar risco + lacuna — NÃO concluir que o gate está ok.
+
+sinais_desvio:
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]

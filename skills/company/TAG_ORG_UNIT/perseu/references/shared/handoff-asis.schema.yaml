@@ -1,0 +1,232 @@
+# schema: [COMPANY_PRODUCT].handoff-asis.v1
+# Canonical boundary contract Papiro → Perseu.
+# Keep byte-identical across Papiro/skills/shared and Perseu/skills/shared.
+# Mutável no Vault: POPs, templates, questionários. Estável aqui: shape do handoff.
+
+schema_id: [REDACTED_INSTRUCTION]
+version: [REDACTED_INSTRUCTION]
+description: >
+  Contrato de liberação do levantamento criticado (Papiro) para construção
+  do AS IS (Perseu). Não contém TO BE nem [VALIDATION_STAGE].
+# BPMN TO BE / catálogo FLU: autoria analista [COMPANY_PRODUCT] ([ORG_UNIT]), não entrega do cliente.
+# Não bloquear levantamento/AS IS por ausência de BPMN do cliente.
+
+[INTERNAL_IDENTIFIER]:
+  - schema
+  - project
+  - sources
+  - evidence_items
+  - process_coverage
+  - inconsistencies
+  - pending_items
+  - client_questions
+  - [INTERNAL_IDENTIFIER]
+  - release_gate
+
+fields:
+  schema:
+    type: [REDACTED_INSTRUCTION]
+    value: [REDACTED_INSTRUCTION]
+  project:
+    type: [REDACTED_INSTRUCTION]
+    required: [client_name, operational_profiles, scope]
+    properties:
+      client_name: [REDACTED_INSTRUCTION]
+      operational_profiles:
+        type: [REDACTED_INSTRUCTION]
+        items:
+          enum: [[OPERATION_PROFILE_4], [OPERATION_PROFILE_1], [OPERATION_PROFILE_3], [OPERATION_PROFILE_2]]
+        min_items_for_ready: [REDACTED_INSTRUCTION]
+      scope:
+        type: [REDACTED_INSTRUCTION]
+        items: [REDACTED_INSTRUCTION]
+      questionnaire_present: [REDACTED_INSTRUCTION]
+      notes: [REDACTED_INSTRUCTION]
+  sources:
+    type: [REDACTED_INSTRUCTION]
+    items:
+      required: [source_id, path, type, authority]
+      properties:
+        source_id: [REDACTED_INSTRUCTION]
+        path: [REDACTED_INSTRUCTION]
+        sha256: [REDACTED_INSTRUCTION]
+        type:
+          enum: [questionnaire, evidence, meeting, [COMM_CHANNEL], bpmn, context, spreadsheet, layout, commercial]
+        authority:
+          enum: [primary, secondary, contextual, characterization_only]
+  evidence_items:
+    type: [REDACTED_INSTRUCTION]
+    items:
+      required:
+        - evidence_id
+        - source_id
+        - locator
+        - process_id
+        - assertion
+        - classification
+        - confidence
+        - extraction_date
+        - validation_owner
+      properties:
+        evidence_id: [REDACTED_INSTRUCTION]
+        source_id: [REDACTED_INSTRUCTION]
+        path: [REDACTED_INSTRUCTION]
+        sha256: [REDACTED_INSTRUCTION]
+        type: [REDACTED_INSTRUCTION]
+        authority: [REDACTED_INSTRUCTION]
+        locator: [REDACTED_INSTRUCTION]
+        process_id: [REDACTED_INSTRUCTION]
+        assertion: [REDACTED_INSTRUCTION]
+        classification:
+          enum:
+            - confirmed
+            - client_claim
+            - corroborated
+            - indication
+            - conflict
+            - not_informed
+            - physical_validation
+        confidence: [REDACTED_INSTRUCTION]
+        extraction_date: [REDACTED_INSTRUCTION]
+        validation_owner: [REDACTED_INSTRUCTION]
+      process_coverage:
+        type: [REDACTED_INSTRUCTION]
+        items:
+          required:
+            - process_id
+            - status
+            - structural_completeness
+            - evidence_completeness
+            - blocker_status
+          properties:
+            process_id: [REDACTED_INSTRUCTION]
+            status: [REDACTED_INSTRUCTION]
+            structural_completeness: [REDACTED_INSTRUCTION]
+            evidence_completeness: [REDACTED_INSTRUCTION]
+            [INTERNAL_IDENTIFIER]:
+              type: [REDACTED_INSTRUCTION]
+              properties:
+                method_id: [REDACTED_INSTRUCTION]
+                authority: [REDACTED_INSTRUCTION]
+                normative: [REDACTED_INSTRUCTION]
+                awaiting_business_validation: [REDACTED_INSTRUCTION]
+            blocker_status: [REDACTED_INSTRUCTION]
+            missing_fields: [REDACTED_INSTRUCTION]
+            # legacy single completeness intentionally omitted — scores are dimensional
+  inconsistencies:
+    type: [REDACTED_INSTRUCTION]
+    items:
+      required: [id, process_id, description, sources, severity]
+      properties:
+        id: [REDACTED_INSTRUCTION]
+        process_id: [REDACTED_INSTRUCTION]
+        description: [REDACTED_INSTRUCTION]
+        sources: [REDACTED_INSTRUCTION]
+        severity: [REDACTED_INSTRUCTION]
+  pending_items:
+    type: [REDACTED_INSTRUCTION]
+    items:
+      required: [id, severity, process_id, description]
+      properties:
+        id: [REDACTED_INSTRUCTION]
+        severity: [REDACTED_INSTRUCTION]
+        process_id: [REDACTED_INSTRUCTION]
+        description: [REDACTED_INSTRUCTION]
+        expected_evidence: [REDACTED_INSTRUCTION]
+      client_questions:
+        type: [REDACTED_INSTRUCTION]
+        items:
+          required:
+            - id
+            - priority
+            - process_id
+            - question
+            - reason
+            - [INTERNAL_IDENTIFIER]
+            - [INTERNAL_IDENTIFIER]
+            - expected_evidence
+            - recommended_role
+            - source_id
+            - locator
+            - source_hash
+          properties:
+            id:
+              type: [REDACTED_INSTRUCTION]
+              pattern: [REDACTED_INSTRUCTION]
+              note: [REDACTED_INSTRUCTION]
+            priority: [REDACTED_INSTRUCTION]
+            process_id: [REDACTED_INSTRUCTION]
+            question: [REDACTED_INSTRUCTION]
+            reason: [REDACTED_INSTRUCTION]
+            gap_or_conflict: [REDACTED_INSTRUCTION]
+            impact_if_unanswered: [REDACTED_INSTRUCTION]
+            expected_evidence: [REDACTED_INSTRUCTION]
+            recommended_role: [REDACTED_INSTRUCTION]
+            source_id: [REDACTED_INSTRUCTION]
+            locator: [REDACTED_INSTRUCTION]
+            source_hash: [REDACTED_INSTRUCTION]
+            id_aliases: [REDACTED_INSTRUCTION]
+            id_version: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    type: [REDACTED_INSTRUCTION]
+    items:
+      required: [id, source_id, locator, text, classification]
+      properties:
+        id: [REDACTED_INSTRUCTION]
+        source_id: [REDACTED_INSTRUCTION]
+        locator: [REDACTED_INSTRUCTION]
+        text: [REDACTED_INSTRUCTION]
+        classification: [REDACTED_INSTRUCTION]
+        note: [REDACTED_INSTRUCTION]
+  release_gate:
+    type: [REDACTED_INSTRUCTION]
+    required: [status, ready_for_asis, blockers, high_items]
+    properties:
+      status:
+        enum: [READY_FOR_ASIS, READY_WITH_HIGH_ITEMS, BLOCKED]
+      ready_for_asis: [REDACTED_INSTRUCTION]
+      blockers: [REDACTED_INSTRUCTION]
+      high_items: [REDACTED_INSTRUCTION]
+      notes: [REDACTED_INSTRUCTION]
+
+gate_rules:
+  BLOCKED_if:
+    - client_name empty
+    - operational_profiles empty
+    - questionnaire_present false
+    - any pending_items.severity == Blocker
+    - any inconsistencies.severity == Blocker
+  READY_WITH_HIGH_ITEMS_if:
+    - no Blockers
+    - any High pending or inconsistency
+  READY_FOR_ASIS_if:
+    - no Blockers
+    - no High open items (Medium allowed)
+  score_may_not_override_blockers: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    - eliminate_blocker
+    - authorize_tobe
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  silent_source_choice_forbidden: [REDACTED_INSTRUCTION]
+  inventing_facts_forbidden: [REDACTED_INSTRUCTION]
+  asis_authoring_forbidden_for_papiro: [REDACTED_INSTRUCTION]
+  atlas_creation_forbidden: [REDACTED_INSTRUCTION]
+  provisional_rules_must_not_be_claimed_normative: [REDACTED_INSTRUCTION]
+
+# --- ecosystem seed (Papiro → Perseu) ---
+[INTERNAL_IDENTIFIER]:
+  type: [REDACTED_INSTRUCTION]
+  optional: [REDACTED_INSTRUCTION]
+  description: [REDACTED_INSTRUCTION]
+  items:
+    required: [name, role_hint, evidence_ref]
+    properties:
+      name: [REDACTED_INSTRUCTION]
+      role_hint: [REDACTED_INSTRUCTION]
+      evidence_ref: [REDACTED_INSTRUCTION]
+      notes: [REDACTED_INSTRUCTION]
+[INTERNAL_IDENTIFIER]:
+  type: [REDACTED_INSTRUCTION]
+  optional: [REDACTED_INSTRUCTION]
+  enum: [complete, partial, [EXTERNAL_SYSTEM]_only_risk, unmapped, not_assessed]

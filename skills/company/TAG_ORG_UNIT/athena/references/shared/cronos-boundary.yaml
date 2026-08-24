@@ -1,0 +1,40 @@
+# Contrato Cronos × Athena
+
+cronos:
+  owns:
+    - cronograma
+    - capacidade
+    - field_blocks
+    - remanejamento_agenda
+    - simultaneidade_implantacao
+  must_not:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - afirmar_escopo_formal_sem_Athena
+
+athena:
+  owns:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - governanca_qualitativa
+    - risco_relacional
+  must_not:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - escrever_no_TAR
+
+[INTERNAL_IDENTIFIER]:
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - prorrogacao_fase
+  - gate_incompleto
+  - avaliacao_baixa
+  - mudanca_escopo
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+
+joint_decision: >
+  Apresentar output Cronos e output Athena lado a lado para decisão humana.

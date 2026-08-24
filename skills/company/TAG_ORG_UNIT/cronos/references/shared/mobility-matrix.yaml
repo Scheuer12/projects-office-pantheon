@@ -1,0 +1,91 @@
+# Matriz de mobilidade de agenda — provisória
+# Migrar para PM Operating Doctrine quando formalizada.
+# Usada por [COMPANY_PRODUCT]-pm-management-advisor.
+
+meta:
+  version: [REDACTED_INSTRUCTION]
+  status: [REDACTED_INSTRUCTION]
+  owner: [REDACTED_INSTRUCTION]
+  note: >
+    Recomendações do Management Advisor devem declarar quando dependem
+    desta matriz provisória vs futura doutrina formal.
+
+# Escala: muito_baixa | baixa | baixa_media | media | media_alta | alta
+
+mobilidade:
+
+  [INTERNAL_IDENTIFIER]:
+    label: [REDACTED_INSTRUCTION]
+    mobilidade: [REDACTED_INSTRUCTION]
+    regra: >
+      Evitar mover ao máximo. Mover apenas com justificativa crítica,
+      aprovação humana e plano de comunicação. Último recurso de capacidade.
+    map_field_blocks: [REDACTED_INSTRUCTION]
+
+  homologacao_final:
+    label: [REDACTED_INSTRUCTION]
+    mobilidade: [REDACTED_INSTRUCTION]
+    regra: >
+      Mover com cautela — afeta [IMPLEMENTATION_EVENT] e aceite. Ideal manter margem
+      de ~1 semana entre fim [VALIDATION_STAGE] e início [IMPLEMENTATION_EVENT] (exceção declarável).
+    map_field_blocks: [REDACTED_INSTRUCTION]
+
+  setup_campo:
+    label: [REDACTED_INSTRUCTION]
+    mobilidade: [REDACTED_INSTRUCTION]
+    regra: [REDACTED_INSTRUCTION]
+    map_field_blocks: [REDACTED_INSTRUCTION]
+
+  levantamento_diagnostico:
+    label: [REDACTED_INSTRUCTION]
+    mobilidade: [REDACTED_INSTRUCTION]
+    regra: [REDACTED_INSTRUCTION]
+
+  reuniao_alinhamento:
+    label: [REDACTED_INSTRUCTION]
+    mobilidade: [REDACTED_INSTRUCTION]
+    regra: [REDACTED_INSTRUCTION]
+
+  documentacao_interna:
+    label: [REDACTED_INSTRUCTION]
+    mobilidade: [REDACTED_INSTRUCTION]
+    regra: >
+      Pode postergar ou redistribuir salvo pré-requisito de aceite formal.
+
+  tarefa_administrativa:
+    label: [REDACTED_INSTRUCTION]
+    mobilidade: [REDACTED_INSTRUCTION]
+    regra: [REDACTED_INSTRUCTION]
+    exclude_patterns: [REDACTED_INSTRUCTION]
+
+  [INTERNAL_IDENTIFIER]:
+    label: [REDACTED_INSTRUCTION]
+    mobilidade: [REDACTED_INSTRUCTION]
+    regra: >
+      Priorizar quando impede [VALIDATION_STAGE], [IMPLEMENTATION_EVENT] ou satisfação do cliente.
+      Não confundir com admin de baixo impacto.
+
+# Hierarquia de decisão gerencial (provisória — formalizar em PM Operating Doctrine)
+decision_priority:
+  - evitar_churn
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - reduzir_custo
+  - [INTERNAL_IDENTIFIER]
+
+heuristicas:
+  - id: [INTERNAL_IDENTIFIER]
+    regra: [REDACTED_INSTRUCTION]
+  - id: [INTERNAL_IDENTIFIER]
+    regra: [REDACTED_INSTRUCTION]
+  - id: [INTERNAL_IDENTIFIER]
+    regra: [REDACTED_INSTRUCTION]
+  - id: [INTERNAL_IDENTIFIER]
+    regra: [REDACTED_INSTRUCTION]
+  - id: no_heroism
+    regra: [REDACTED_INSTRUCTION]
+  - id: [INTERNAL_IDENTIFIER]
+    regra: [REDACTED_INSTRUCTION]
+  - id: [INTERNAL_IDENTIFIER]
+    regra: [REDACTED_INSTRUCTION]

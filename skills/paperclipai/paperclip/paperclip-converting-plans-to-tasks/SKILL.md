@@ -1,0 +1,15 @@
+---
+name: [REDACTED_INSTRUCTION]
+description: [REDACTED_INSTRUCTION]
+slug: [REDACTED_INSTRUCTION]
+metadata:
+  sources:
+    -
+      kind: [REDACTED_INSTRUCTION]
+      commit: [REDACTED_INSTRUCTION]
+      path: [REDACTED_INSTRUCTION]
+      repo: [REDACTED_INSTRUCTION]
+      trackingRef: [REDACTED_INSTRUCTION]
+      url: [REDACTED_INSTRUCTION]
+key: [REDACTED_INSTRUCTION]
+

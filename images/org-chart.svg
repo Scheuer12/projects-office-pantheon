@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized multi-agent organization chart</title>
+  <desc id="desc">A portfolio-safe organization chart showing CEO, CTO, PMO, and specialist agent lanes.</desc>
+  <style>
+    text { font-family: Inter, Segoe UI, Arial, sans-serif; fill: #172033; }
+    .label { font-size: 18px; font-weight: 700; }
+    .meta { font-size: 13px; fill: #536173; }
+    .box { fill: #ffffff; stroke: #9aa7b8; stroke-width: 1.5; rx: 8; }
+    .manager { fill: #f7fbff; stroke: #4475a8; }
+    .specialist { fill: #fbfcf8; stroke: #8a9a55; }
+    .line { stroke: #9aa7b8; stroke-width: 2; fill: none; }
+    .bg { fill: #f4f6f8; }
+  </style>
+  <rect class="bg" x="0" y="0" width="1100" height="620"/>
+  <text x="550" y="42" text-anchor="middle" class="label">[ORG_NAME] - Sanitized Agent Portfolio</text>
+  <text x="550" y="64" text-anchor="middle" class="meta">Role separation, governance lanes, and handoff-oriented specialist agents</text>
+
+  <rect class="box manager" x="470" y="90" width="160" height="64"/>
+  <text x="550" y="119" text-anchor="middle" class="label">CEO</text>
+  <text x="550" y="140" text-anchor="middle" class="meta">Strategy and decisions</text>
+
+  <path class="line" d="M550 154 V195 M300 195 H800"/>
+  <path class="line" d="M300 195 V225"/>
+  <path class="line" d="M800 195 V225"/>
+
+  <rect class="box manager" x="220" y="225" width="160" height="64"/>
+  <text x="300" y="254" text-anchor="middle" class="label">CTO</text>
+  <text x="300" y="275" text-anchor="middle" class="meta">Agent architecture</text>
+
+  <rect class="box manager" x="720" y="225" width="160" height="64"/>
+  <text x="800" y="254" text-anchor="middle" class="label">PMO Zeus</text>
+  <text x="800" y="275" text-anchor="middle" class="meta">Portfolio orchestration</text>
+
+  <path class="line" d="M800 289 V330 M210 330 H990"/>
+  <path class="line" d="M210 330 V360"/>
+  <path class="line" d="M405 330 V360"/>
+  <path class="line" d="M600 330 V360"/>
+  <path class="line" d="M795 330 V360"/>
+  <path class="line" d="M990 330 V360"/>
+
+  <rect class="box specialist" x="130" y="360" width="160" height="64"/>
+  <text x="210" y="389" text-anchor="middle" class="label">Cronos</text>
+  <text x="210" y="410" text-anchor="middle" class="meta">Schedule and workload</text>
+
+  <rect class="box specialist" x="325" y="360" width="160" height="64"/>
+  <text x="405" y="389" text-anchor="middle" class="label">Athena</text>
+  <text x="405" y="410" text-anchor="middle" class="meta">Evidence and risk</text>
+
+  <rect class="box manager" x="520" y="360" width="160" height="64"/>
+  <text x="600" y="389" text-anchor="middle" class="label">Gaia</text>
+  <text x="600" y="410" text-anchor="middle" class="meta">Blueprint orchestration</text>
+
+  <rect class="box specialist" x="715" y="360" width="160" height="64"/>
+  <text x="795" y="389" text-anchor="middle" class="label">Setup Agent</text>
+  <text x="795" y="410" text-anchor="middle" class="meta">Setup plan tooling</text>
+
+  <rect class="box specialist" x="910" y="360" width="160" height="64"/>
+  <text x="990" y="389" text-anchor="middle" class="label">Data Hunter</text>
+  <text x="990" y="410" text-anchor="middle" class="meta">Read-only retrieval</text>
+
+  <path class="line" d="M600 424 V462 M315 462 H885"/>
+  <path class="line" d="M315 462 V492"/>
+  <path class="line" d="M505 462 V492"/>
+  <path class="line" d="M695 462 V492"/>
+  <path class="line" d="M885 462 V492"/>
+
+  <rect class="box specialist" x="235" y="492" width="160" height="64"/>
+  <text x="315" y="521" text-anchor="middle" class="label">Papiro</text>
+  <text x="315" y="542" text-anchor="middle" class="meta">Intake quality gate</text>
+
+  <rect class="box specialist" x="425" y="492" width="160" height="64"/>
+  <text x="505" y="521" text-anchor="middle" class="label">Perseu</text>
+  <text x="505" y="542" text-anchor="middle" class="meta">AS IS package</text>
+
+  <rect class="box specialist" x="615" y="492" width="160" height="64"/>
+  <text x="695" y="521" text-anchor="middle" class="label">Mapping</text>
+  <text x="695" y="542" text-anchor="middle" class="meta">Board-gated mapping</text>
+
+  <rect class="box specialist" x="805" y="492" width="160" height="64"/>
+  <text x="885" y="521" text-anchor="middle" class="label">Atlas</text>
+  <text x="885" y="542" text-anchor="middle" class="meta">TO BE storytelling</text>
+</svg>

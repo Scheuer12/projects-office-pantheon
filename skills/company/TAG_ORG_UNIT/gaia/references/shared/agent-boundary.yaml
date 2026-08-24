@@ -1,0 +1,41 @@
+# Fronteira Gaia × blueprint agents
+gaia:
+  role: [REDACTED_INSTRUCTION]
+  display_name: [REDACTED_INSTRUCTION]
+  reports_to: [REDACTED_INSTRUCTION]
+  may:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - synthesize_status
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  may_not:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - auto_homologate
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+
+papiro:
+  stage: [REDACTED_INSTRUCTION]
+  reports_conceptually_to: [REDACTED_INSTRUCTION]
+
+perseu:
+  stage: [REDACTED_INSTRUCTION]
+  reports_conceptually_to: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  stage: [REDACTED_INSTRUCTION]
+  reports_conceptually_to: [REDACTED_INSTRUCTION]
+  board_gated: [REDACTED_INSTRUCTION]
+  mutates_tobe_reference: [REDACTED_INSTRUCTION]
+  requires:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+
+atlas:
+  stage: [REDACTED_INSTRUCTION]
+  reports_conceptually_to: [REDACTED_INSTRUCTION]
+  includes: [REDACTED_INSTRUCTION]
+  may_use_existing_mapping_pack_without_mutating_reference: [REDACTED_INSTRUCTION]

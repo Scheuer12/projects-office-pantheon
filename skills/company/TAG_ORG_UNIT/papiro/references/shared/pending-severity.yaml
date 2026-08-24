@@ -1,0 +1,11 @@
+levels:
+  Blocker:
+    meaning: [REDACTED_INSTRUCTION]
+    escalate_to: [REDACTED_INSTRUCTION]
+    inform: [REDACTED_INSTRUCTION]
+  High:
+    meaning: [REDACTED_INSTRUCTION]
+    treat_with: [REDACTED_INSTRUCTION]
+  Medium:
+    meaning: [REDACTED_INSTRUCTION]
+    treat_with: [REDACTED_INSTRUCTION]

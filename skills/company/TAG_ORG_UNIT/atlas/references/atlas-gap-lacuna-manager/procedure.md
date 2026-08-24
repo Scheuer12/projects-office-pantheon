@@ -1,0 +1,25 @@
+# atlas-gap-lacuna-manager
+
+> Internal procedure for `[REDACTED_INSTRUCTION]`. Shared contracts: `[REDACTED_INSTRUCTION]`.
+
+# Gap / Lacuna Manager — Atlas
+
+Toda não-aderência vira **LAC-xxx** no TO BE — nunca inventar cobertura.
+
+| [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] |
+|---|---|---|
+| [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] |
+| [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] |
+| [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] |
+| [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] | [REDACTED_INSTRUCTION] |
+
+## Severidade
+
+Alinhar ao POP TO BE: `[REDACTED_INSTRUCTION]` | `[REDACTED_INSTRUCTION]` | `[REDACTED_INSTRUCTION]` | `Low`.
+
+- Blocker/High em storytelling → `[INTERNAL_API_METHOD]` ou ressalva explícita no release gate
+- Não converter lacuna em “módulo inventado”
+
+## Saída mínima por LAC
+
+`id`, `[REDACTED_INSTRUCTION]`, `[REDACTED_INSTRUCTION]`, `[REDACTED_INSTRUCTION]`, `[REDACTED_INSTRUCTION]`, `[REDACTED_INSTRUCTION]`, `[REDACTED_INSTRUCTION]`

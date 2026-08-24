@@ -1,0 +1,37 @@
+# Resolução do Vault — Papiro
+meta:
+  agent: [REDACTED_INSTRUCTION]
+  policy: [REDACTED_INSTRUCTION]
+  updated_at: [REDACTED_INSTRUCTION]
+
+resolution_order:
+  - env: PAPIRO_KNOWLEDGE_ROOT  # must be [REDACTED_INSTRUCTION] URL/path; human-local filesystem forbidden
+  - env: [COMPANY_INTERNAL_ID]  # same constraint
+  - file: skills/shared/brain-root.pointer  # [REDACTED_INSTRUCTION] AS IS e Levantamento [CODE_REFERENCE] under [CODE_REFERENCE] [REDACTED_INSTRUCTION]
+
+on_missing: >
+  INSUFICIENTE — declarar que o [REDACTED_INSTRUCTION] [REDACTED_INSTRUCTION] não foi encontrado; pedir env [REDACTED_INSTRUCTION]
+  ou corrigir brain-root.pointer. Nunca cair para filesystem humano.
+forbidden_roots:
+  - [INTERNAL_IDENTIFIER]
+  - human_desktop
+  - [INTERNAL_IDENTIFIER]
+access:
+  preferred: [REDACTED_INSTRUCTION]
+  local_filesystem_fallback: [REDACTED_INSTRUCTION]
+
+[REDACTED_INSTRUCTION]:
+  moc: [REDACTED_INSTRUCTION]
+  knowledge: [REDACTED_INSTRUCTION]
+  architecture: [REDACTED_INSTRUCTION]
+  pops: [REDACTED_INSTRUCTION]
+  examples: [REDACTED_INSTRUCTION]
+  levantamento: [REDACTED_INSTRUCTION]
+  wms_context: [REDACTED_INSTRUCTION]
+
+hardcode_forbidden:
+  - [INTERNAL_IDENTIFIER]
+  - questionnaire_questions
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - template_placeholders

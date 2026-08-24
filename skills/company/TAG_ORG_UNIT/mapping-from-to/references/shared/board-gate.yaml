@@ -1,0 +1,39 @@
+# Gate de board — MappingFromTo
+schema_id: [REDACTED_INSTRUCTION]
+version: [REDACTED_INSTRUCTION]
+
+why_this_agent_exists: >
+  MappingFromTo é o referenciador conceitual AS IS/levantamento → módulos/fluxos [COMPANY_PRODUCT]
+  ([CODE_REFERENCE] KB). Existe porque Atlas/Perseu precisam de um From-To estável e code-backed —
+  não para redigir TO BE sozinho.
+
+mutates_reference: [REDACTED_INSTRUCTION]
+reference_targets:
+  - MappingFromTo/skills/shared/mapping-from-to.md
+  - MappingFromTo/skills/shared/glossary-logistics-[COMPANY_PRODUCT].md
+  - MappingFromTo/references/[CODE_REFERENCE]-kb/* [REDACTED_INSTRUCTION]
+  - outros artefatos de referência TO BE/From-To deste pack
+
+activation:
+  default: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  gaia_may:
+    - recommend_run
+    - [INTERNAL_IDENTIFIER]
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+
+run_protocol:
+  1_authorize: [REDACTED_INSTRUCTION]
+  2_propose: [REDACTED_INSTRUCTION]
+  3_wait: [REDACTED_INSTRUCTION]
+  4_apply: [REDACTED_INSTRUCTION]
+  5_receipt: [REDACTED_INSTRUCTION]
+
+forbidden:
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]

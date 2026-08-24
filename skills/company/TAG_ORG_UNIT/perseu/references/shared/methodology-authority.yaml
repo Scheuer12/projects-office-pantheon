@@ -1,0 +1,11 @@
+# Autoridade metodológica (não confundir com fatos do projeto)
+order:
+  1: [REDACTED_INSTRUCTION]
+  2: [REDACTED_INSTRUCTION]
+  3: [REDACTED_INSTRUCTION]
+  4: [REDACTED_INSTRUCTION]
+
+notes:
+  - Exemplos assinados não viram norma.
+  - Guia [CODE_REFERENCE] descreve capacidade de produto, não estado atual do cliente.
+  - Cutover e treinamento são contexto de fase posterior.

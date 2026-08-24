@@ -1,0 +1,5 @@
+schema_id: [REDACTED_INSTRUCTION]
+severity: [Blocker, High, Medium]
+required: [id, severity, process_id, description, expected_evidence]
+blocker_blocks_baseline: [REDACTED_INSTRUCTION]
+high_must_resolve_before_tobe: [REDACTED_INSTRUCTION]

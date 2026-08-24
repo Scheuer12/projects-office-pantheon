@@ -1,0 +1,82 @@
+# Fronteira Papiro × Perseu × Atlas
+papiro:
+  may:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  may_not:
+    - [INTERNAL_IDENTIFIER]
+    - invent_answers
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - author_tobe
+  release_statuses:
+    - READY_FOR_ASIS
+    - READY_WITH_HIGH_ITEMS
+    - BLOCKED
+
+perseu:
+  may:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - package_validation
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  may_not:
+    - silently_reinterview
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - auto_homologate
+    - [INTERNAL_IDENTIFIER]  # isso é Atlas
+  statuses:
+    - DRAFT_BLOCKED
+    - DRAFT_READY_FOR_VALIDATION
+    - VALIDATED_BY_CLIENT
+  [INTERNAL_IDENTIFIER]:
+    - handoff_invalid
+    - blockers_open
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  [INTERNAL_IDENTIFIER]:
+    - status in [DRAFT_READY_FOR_VALIDATION, VALIDATED_BY_CLIENT]
+    - [INTERNAL_IDENTIFIER] empty or explicitly [INTERNAL_IDENTIFIER]
+    - asis_package schema valid
+  note: >
+    DRAFT_READY_FOR_VALIDATION permite rascunho Atlas com ressalvas;
+    VALIDATED_BY_CLIENT é preferível para baseline oficial.
+
+atlas:
+  status: [REDACTED_INSTRUCTION]
+  may:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - tell_operation_story_in_[COMPANY_INTERNAL_ID]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  may_not:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+    - auto_homologate
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  statuses:
+    - DRAFT_BLOCKED
+    - DRAFT_READY_FOR_VALIDATION
+    - VALIDATED_BY_CLIENT
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_IDENTIFIER]
+    - [INTERNAL_IDENTIFIER]
+  [INTERNAL_IDENTIFIER]:
+    - [INTERNAL_IDENTIFIER]
+  premise: >
+    Contar a história do [REDACTED_INSTRUCTION] do cliente por dentro do código
+    e estrutura do [COMPANY_PRODUCT]. Output = storytelling exclusivo em fluxos, módulos
+    e configurações do [CODE_REFERENCE] [REDACTED_INSTRUCTION].

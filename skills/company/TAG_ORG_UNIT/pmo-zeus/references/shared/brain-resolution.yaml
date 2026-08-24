@@ -1,0 +1,49 @@
+# Como resolver o cérebro — [REDACTED_INSTRUCTION]
+
+meta:
+  package: [REDACTED_INSTRUCTION]
+  policy: [REDACTED_INSTRUCTION]
+  updated_at: [REDACTED_INSTRUCTION]
+
+[INTERNAL_IDENTIFIER]:
+  order:
+    - env: ZEUS_SBRAIN_ROOT
+    - file: skills/shared/brain-root.pointer   # uma linha, path absoluto
+  on_missing: >
+    INSUFICIENTE — declarar que o [REDACTED_INSTRUCTION] não foi encontrado; pedir path ou env.
+
+equipe:
+  atual:
+    label: [REDACTED_INSTRUCTION]
+    relative_paths:
+      - "05 - Equipe/Time Atual"
+      - "05 - Equipe/Time Atual/Organograma Atual.md"
+      - "05 - Equipe/🗺️ MOC - Estrutura da Equipe.md"
+    usage: [REDACTED_INSTRUCTION]
+    rule: >
+      Única estrutura vigente. Relê do [REDACTED_INSTRUCTION] a cada necessidade.
+      Nunca cachear nomes em skills.
+  futura:
+    label: [REDACTED_INSTRUCTION]
+    relative_paths:
+      - "05 - Equipe/Time Idealizado - Set 2026"
+    usage: [REDACTED_INSTRUCTION]
+    rule: >
+      Não usar para capacidade, papéis vigentes ou "quem está no time".
+      Se citado, selo PLANEJAMENTO.
+
+navigation_entrypoints:
+  - "00 - MOC"
+  - "🗺️ MOC - Projetos [COMPANY_PRODUCT].md"
+  - "🗺️ MOC - POPs e Regras de Negócio.md"
+  - "01 - Processos"
+  - "02 - Conceitos"
+  - "06 - Política e Premissas"
+  - "07 - POPs e Regras de Negócio"
+  - "AI - Start Here"
+
+read_protocol:
+  prefer: [REDACTED_INSTRUCTION]
+  fallback: [REDACTED_INSTRUCTION]
+  cite: [REDACTED_INSTRUCTION]
+  if_unreadable: [REDACTED_INSTRUCTION]

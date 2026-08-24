@@ -1,0 +1,189 @@
+schema: "[AGENT_PLATFORM]/v1"
+agents:
+  athena:
+    capabilities: "Owns qualitative PM: evidence, gates, governance, CSAT/SLA, client risk."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  atlas:
+    capabilities: "Owns TO BE storytelling in [COMPANY_PRODUCT] terms, source-pack precision modes, and read-only codebase refinement."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  ceo:
+    role: "ceo"
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+    runtime:
+      heartbeat:
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: true
+  [WMS_SETUP_AGENT]:
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  cronos:
+    capabilities: "Owns structural PM: deadlines, capacity, remanejamento, [PROJECT_SYSTEM]-backed snapshots."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  cto:
+    role: "cto"
+    icon: "cpu"
+    capabilities: "Owns technical roadmap, architecture, MCP/platform tooling, engineering execution, and unblocking infra gaps for the agent org."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+    runtime:
+      heartbeat:
+        maxConcurrentRuns: 1
+  gaia-analista:
+    role: "manager"
+    capabilities: "Owns [DOMAIN_PRODUCT] blueprint orchestration as Gaia (Analista) under PMO (Zeus): Papiro, Perseu, board-gated MappingFromTo, Atlas; enforces handoffs, anti-[EXTERNAL_SYSTEM]-only, and read-only code gate."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  mappingfromto:
+    capabilities: "Owns board-gated MappingPack and TO BE/From-To reference updates (diff approval before write)."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  or-culo-bridge:
+    capabilities: "Consults [[ENV_VAR]] [COMPANY_PRODUCT] for [DOMAIN_PRODUCT] source code and client's specifics config information."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  papiro:
+    capabilities: "Owns levantamento quality gate and HandoffASIS release for Perseu."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  perseu:
+    capabilities: "Owns AS IS baseline with systems\\_inventory and release signal for Atlas."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  pmo-zeus:
+    role: "manager"
+    capabilities: "Owns PILOT PMO orchestration: prioritization, risk, escalation, coordination of Cronos/Athena, and operational [PROJECT_SYSTEM] (and [COMM_CHANNEL] when tool exists) communications via the ZC matrix."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+  userdatahunter:
+    role: "researcher"
+    icon: "search"
+    capabilities: "Resolves [[ENV_VAR]] auth schema and hunts live client/user operational data via MCP; hands off [[ENV_VAR]] execution to [[ENV_VAR]] Bridge."
+    adapter:
+      config:
+        model: "composer-2.5"
+      type: "cursor"
+company:
+  attachmentMaxBytes: 10485760
+projects:
+  project-client-4:
+    color: "#8b5cf6"
+    inputs:
+      env:
+        [DOCUMENT_PLATFORM]_CLIENT_ID:
+          description: "Optional default for [DOCUMENT_PLATFORM]_CLIENT_ID on project project-client-4"
+          kind: "plain"
+          default: ""
+          requirement: "optional"
+        [DOCUMENT_PLATFORM]_[ENV_VAR]:
+          description: "Optional default for [DOCUMENT_PLATFORM]_[ENV_VAR] on project project-client-4"
+          kind: "secret"
+          default: ""
+          requirement: "optional"
+        [DOCUMENT_PLATFORM]_SITE_URL:
+          description: "Optional default for [DOCUMENT_PLATFORM]_SITE_URL on project project-client-4"
+          kind: "plain"
+          default: "[[DOCUMENT_PLATFORM]_URL]][DOMAIN_PRODUCT]"
+          requirement: "optional"
+        [DOCUMENT_PLATFORM]_TENANT_ID:
+          description: "Optional default for [DOCUMENT_PLATFORM]_TENANT_ID on project project-client-4"
+          kind: "plain"
+          default: ""
+          requirement: "optional"
+    status: "planned"
+  project-client-9:
+    color: "#8b5cf6"
+    status: "planned"
+  project-client-5:
+    color: "#06b6d4"
+    status: "planned"
+  project-client-7:
+    color: "#6366f1"
+    status: "in_progress"
+  project-client-6:
+    color: "#ef4444"
+    status: "backlog"
+  project-client-8:
+    color: "#8b5cf6"
+    status: "planned"
+routines:
+  daily-project-report:
+    status: "paused"
+    triggers:
+      -
+        kind: "schedule"
+        cronExpression: "0 9 * * *"
+        label: "schedule"
+        timezone: "America/Sao_Paulo"
+  daily-project-report-2:
+    status: "paused"
+    triggers:
+      -
+        kind: "schedule"
+        cronExpression: "0 9 * * *"
+        label: "schedule"
+        timezone: "America/Sao_Paulo"
+  daily-project-report-mvp:
+    triggers:
+      -
+        kind: "schedule"
+        cronExpression: "0 10 * * *"
+        label: "schedule"
+        timezone: "America/Sao_Paulo"
+  daily-project-report-mvp-2:
+    triggers:
+      -
+        kind: "schedule"
+        cronExpression: "0 10 * * *"
+        label: "schedule"
+        timezone: "America/Sao_Paulo"
+sidebar:
+  agents:
+    - "ceo"
+    - "cto"
+    - "or-culo-bridge"
+    - "pmo-zeus"
+    - "athena"
+    - "[WMS_SETUP_AGENT]"
+    - "cronos"
+    - "gaia-analista"
+    - "userdatahunter"
+    - "atlas"
+    - "mappingfromto"
+    - "papiro"
+    - "perseu"
+  projects:
+    - "project-client-7"
+    - "project-client-6"
+    - "project-client-8"
+    - "project-client-9"
+    - "project-client-5"
+    - "project-client-4"

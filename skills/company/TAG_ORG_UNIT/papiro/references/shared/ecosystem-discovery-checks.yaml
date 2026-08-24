@@ -1,0 +1,44 @@
+# Checagens de descoberta de ecossistema — Papiro
+schema_id: [REDACTED_INSTRUCTION]
+
+checks:
+  - id: ECO-01
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+  - id: ECO-02
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+  - id: ECO-03
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+  - id: ECO-04
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+  - id: ECO-05
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+  - id: ECO-06
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+  - id: ECO-07
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+  - id: ECO-08
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+  - id: ECO-09
+    title: [REDACTED_INSTRUCTION]
+    if_missing: [REDACTED_INSTRUCTION]
+    question_seed: [REDACTED_INSTRUCTION]
+
+coherence:
+  - [INTERNAL_IDENTIFIER]
+  - [INTERNAL_IDENTIFIER]

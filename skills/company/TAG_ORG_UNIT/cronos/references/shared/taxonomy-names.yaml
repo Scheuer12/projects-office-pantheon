@@ -1,0 +1,41 @@
+# Match case-insensitive em titulo + descricao da tarefa
+# Ordem: primeira categoria que bater (implantacao antes de homologacao se ambíguo → listar ambíguas)
+#
+# ATENÇÃO — busca ≠ capacidade:
+#   - Este arquivo: classificar/listar tarefas por nome.
+#   - Capacidade (implantações simultâneas, livre de [IMPLEMENTATION_EVENT], planejamento):
+#     usar field-blocks.yaml (bloco pai; excluir subtarefas Dia NN e coordenação).
+
+implantacao:
+  patterns:
+    - "[IMPLEMENTATION_EVENT]"
+    - "implantacao"
+    - "implant"
+    - "[RELEASE_DECISION]"
+    - "golive"
+    - "cutover"
+    - "reimplanta"
+
+homologacao:
+  patterns:
+    - "[VALIDATION_STAGE]"
+    - "homologacao"
+    - "[VALIDATION_ENV]"
+    - "termo de [VALIDATION_ENV]"
+
+setup:
+  patterns:
+    - "setup"
+    - "configuração"
+    - "configuracao"
+    - "instalação de equipamento"
+    - "instalacao de equipamento"
+
+# Tipo [CODE_REFERENCE] informativo (não substitui nome) — labels vistos em [INTERNAL_API_METHOD]
+[INTERNAL_IDENTIFIER]:
+  - "Projeto - Agenda [IMPLEMENTATION_EVENT]"
+  - "Projeto - Desenvolvimento"
+  - "Projeto - BluePrint"
+  - "Projeto [CODE_REFERENCE]"
+  - "Projeto - Treinamento"
+  - "Projeto - [SYSTEM_LINKS] e Rotinas"

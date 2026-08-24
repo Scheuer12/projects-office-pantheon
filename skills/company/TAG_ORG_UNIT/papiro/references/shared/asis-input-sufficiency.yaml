@@ -1,0 +1,18 @@
+# Sanitized AS IS input sufficiency rules.
+# Concrete industry/client/system prompts were removed.
+
+minimum_sections:
+  - [SECTION_1]
+  - [SECTION_2]
+  - [SECTION_3]
+  - [SECTION_4]
+
+mandatory_questions:
+  - "[REDACTED_CLIENT_QUESTION_1]"
+  - "[REDACTED_CLIENT_QUESTION_2]"
+  - "[REDACTED_CLIENT_QUESTION_3]"
+
+risk_flags:
+  single_system_assumption_without_confirmation: [REDACTED_INSTRUCTION]
+  missing_external_dependency_map: [REDACTED_INSTRUCTION]
+  missing_parallel_controls: [REDACTED_INSTRUCTION]

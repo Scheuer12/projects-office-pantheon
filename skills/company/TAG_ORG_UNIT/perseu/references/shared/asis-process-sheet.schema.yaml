@@ -1,0 +1,79 @@
+# asis-process-sheet.schema.yaml
+# GAP: POP AS IS V1R3 exige "15 campos de fluxo" sem enumerá-los no corpo do POP.
+# Schema provisório interno — [REDACTED_INSTRUCTION].
+
+schema_id: [REDACTED_INSTRUCTION]
+authority: [REDACTED_INSTRUCTION]
+normative_status: [REDACTED_INSTRUCTION]
+source_gap: [REDACTED_INSTRUCTION]
+prohibit_claim_as_official: [REDACTED_INSTRUCTION]
+
+field_count: [REDACTED_INSTRUCTION]
+# IMPORTANTE: não renomear/alterar automaticamente estes campos quando o template
+# oficial aparecer. Usar reconcile_process_sheet.py → migração só com aceite humano.
+fields:
+  - id: F01
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F02
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F03
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F04
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F05
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F06
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F07
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F08
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F09
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F10
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F11
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F12
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F13
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F14
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+  - id: F15
+    name: [REDACTED_INSTRUCTION]
+    label: [REDACTED_INSTRUCTION]
+header_fields:
+  - codigo
+  - macrocategoria
+  - sistemas_inventario
+  - responsavel_processo
+
+[INTERNAL_IDENTIFIER]:
+  missing_value: [REDACTED_INSTRUCTION]
+  not_informed:
+    structural_presence: [REDACTED_INSTRUCTION]
+    counts_toward_evidence_completeness: [REDACTED_INSTRUCTION]
+  na_value: [REDACTED_INSTRUCTION]
+  [INTERNAL_IDENTIFIER]:
+    - justification_recorded: true
+    - [INTERNAL_IDENTIFIER]: true
+
+reconciliation:
+  on_template_arrival: [REDACTED_INSTRUCTION]
+  routine: [REDACTED_INSTRUCTION]
+  migration_requires_human_acceptance: [REDACTED_INSTRUCTION]

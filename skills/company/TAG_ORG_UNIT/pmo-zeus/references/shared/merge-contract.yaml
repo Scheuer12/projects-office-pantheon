@@ -1,0 +1,30 @@
+# Contrato de fusão — parecer gerencial Zeus
+
+output_sections:
+  - Sintese_gerencial
+  - Base_consultada
+  - Fatos_confirmados
+  - Regra_ou_premissa_consultada
+  - Indicios
+  - Riscos
+  - Conflitos
+  - Lacunas
+  - Recomendacao
+  - Escalonamento
+
+inputs:
+  - StructuralBrief
+  - QualitativeBrief
+  - BrainHits
+  - RiskClassification
+  - EscalationAdvice
+  - [INTERNAL_IDENTIFIER]
+
+rules:
+  - Separar principio Zeus de regra [REDACTED_INSTRUCTION] (path)
+  - Nao reescrever fatos dos briefs
+  - Conflito Cronos x Athena explicito
+  - Idealizado so com PLANEJAMENTO
+  - Equipe so com BrainHit Time Atual nesta run
+  - Sem autorizacao de mudanca sensivel pelo Zeus
+  - Inconclusivo quando lacuna impedir classificacao honesta
