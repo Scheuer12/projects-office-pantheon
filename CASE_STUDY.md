@@ -1,67 +1,74 @@
-# Sanitized Multi-Agent Operations Portfolio
+# Pantheon: structuring AI support for project operations
 
-## Overview
+## Context
 
-This repository is a sanitized portfolio export of a specialist multi-agent organization for project operations, process discovery, implementation planning, and governance.
+Project delivery depends on more than a schedule. Meeting notes, scope definitions, process knowledge, and implementation decisions all affect what a team should do next. When those sources are scattered, even a well-written status report can miss the reason a project is stuck.
 
-The artifact demonstrates how I structured agents as an operating system: clear reporting lines, lane ownership, explicit handoff contracts, safety boundaries, source hierarchy, and reusable skill packs.
+Pantheon brings specialist agent roles into that work. The goal is to support analysis and preparation while keeping evidence and decision authority visible.
 
-## Problem
+This public version is a redacted architecture case study. The source files preserve parts of the design, but they cannot be imported as a working production system.
 
-Operational teams often lose clarity when project data, process knowledge, implementation plans, and client-facing decisions live across many tools and informal conversations.
+## My contribution
 
-This project explores a governed agent organization that separates:
+I structured the operating model: responsibilities, agent instructions, reusable skill packages, handoff contracts, and rules for handling evidence and escalating decisions.
 
-- structural project analysis from qualitative risk review
-- implementation blueprint work from portfolio management
-- evidence gathering from decision-making
-- code or system reading from mutation authority
-- internal synthesis from outbound communication
+The contribution described here is that project-specific design. Platform-related utility packages are also included under `skills/paperclipai/`; the repository should not be read as a claim that I built the underlying agent platform.
 
-## Architecture
+## How the work is divided
 
-The organization uses a CEO and PMO layer for prioritization and synthesis, with specialist agents underneath:
+Two groups handle different questions:
 
-- `Cronos`: schedule, workload, and structural project analysis
-- `Athena`: evidence, governance, client risk, and quality gates
-- `Gaia`: blueprint orchestration for process and implementation work
-- `Papiro`: intake quality, process discovery checks, and client-question packs
-- `Perseu`: AS IS package construction and validation handoff
-- `Atlas`: TO BE storytelling and read-only codebase refinement
-- `MappingFromTo`: board-gated mapping between operational concepts and product vocabulary
-- `CTO`: agent architecture, standards, portability, and safety review
+| Workstream | Question | Roles |
+|---|---|---|
+| Project analysis | What is happening, what is at risk, and what needs attention? | Zeus coordinates Cronos and Athena |
+| Process discovery and blueprinting | Do we understand the current operation well enough to propose the next one? | Gaia coordinates Papiro, Perseu, Atlas, and approved mapping work |
 
-## Technical Highlights
+Cronos covers the structural side of project analysis, including schedules and workload. Athena examines evidence, scope, and qualitative risks. Zeus consolidates their findings.
 
-- Skill-pack pattern using `SKILL.md`, `references/`, and `scripts/`
-- Agent anatomy pattern using `AGENTS.md`, `SOUL.md`, `TOOLS.md`, and `HEARTBEAT.md`
-- Explicit source hierarchy for facts, rules, procedures, and memory
-- Read-only default posture for sensitive systems
-- Human approval gates for mutations, scope decisions, [RELEASE_DECISION] decisions, and external communication
-- Reusable scripts for setup-plan generation, transcript scanning, topic reconciliation, naming, and progress updates
-- Sanitized placeholders for employer, client, person, system, [REDACTED_ENDPOINT], and credential references
+For process work, Papiro checks whether the input is sufficient. Perseu structures the current process, or AS-IS. Atlas develops the proposed process, or TO-BE. MappingFromTo handles changes to the relationship between operational concepts and the target vocabulary, with a human approval boundary.
 
-## Safety Model
+The [blueprint pipeline](skills/company/TAG_ORG_UNIT/gaia/references/shared/blueprint-pipeline.yaml) shows the coordination structure. The [agent definitions](agents/) provide the individual responsibilities.
 
-The design assumes agents should fail honestly when evidence is missing, source access is blocked, or a decision exceeds their authority.
+## Decisions worth inspecting
 
-The core safety principles are:
+### 1. Split the work by responsibility
 
-- no hardcoded live client rosters or mutable operational facts
-- no secrets in repo files, comments, or generated artifacts
-- no unauthorized writes to business systems
-- no client-facing claims without evidence and communication proof
-- no silent reconciliation when sources conflict
-- no use of human-local paths as production knowledge sources
+Schedule analysis, evidence review, and process mapping need different inputs and checks. Separate roles make those boundaries easier to describe and inspect.
 
-## Portfolio Scope
+The cost is coordination: every additional role creates another handoff to maintain. The design therefore needs explicit contracts rather than relying on an agent name to imply what it can do.
 
-This repository is not a runnable production import. It is intentionally redacted so reviewers can inspect the architecture and reasoning style without reconstructing employer processes, customer environments, or confidential operational details.
+### 2. Carry evidence through the workflow
 
-## What This Demonstrates
+A statement can be confirmed, a claim, an indication, or a conflict. Treating all of them as established facts would make the final report misleading.
 
-- Systems thinking applied to AI agent organizations
-- Agent governance and delegation architecture
-- Operational workflow design for real business constraints
-- Practical safety boundaries for enterprise AI usage
-- Ability to translate ambiguous process work into modular, auditable automation components
+The [evidence taxonomy](skills/company/TAG_ORG_UNIT/papiro/references/shared/evidence-taxonomy.yaml) retains fields for source references, locators, assertions, classification, and confidence. A [handoff schema](skills/company/TAG_ORG_UNIT/papiro/references/shared/handoff-asis.schema.yaml) provides the structure for passing discovery work forward.
+
+These files show the intended contracts. They do not, by themselves, prove that every runtime response follows them.
+
+### 3. Keep calculations explicit
+
+Some steps are easier to inspect as ordinary code. The [transcript scanner](skills/company/TAG_ORG_UNIT/TAG_DOMAIN_SETUP_SKILL/scripts/scan_transcricao.py) finds candidate passages and preserves their surrounding text and time reference. It does not decide whether a passage is actually relevant to the issue being analyzed.
+
+The [segment calculation script](skills/company/TAG_ORG_UNIT/TAG_DOMAIN_SETUP_SKILL/scripts/compute_indice.py) takes already-confirmed segments and calculates a total and percentage. The separation matters: classification needs context; adding durations should remain reproducible.
+
+### 4. Separate analysis from authority to act
+
+Finding a risk does not automatically authorize a scope change, a system update, or an external message. The operating model includes escalation and approval boundaries for those actions.
+
+The [communication action matrix](skills/company/TAG_ORG_UNIT/pmo-zeus/references/shared/communication-action-matrix.yaml) and [mapping approval gate](skills/company/TAG_ORG_UNIT/mapping-from-to/references/shared/board-gate.yaml) show parts of this design. Technical enforcement still depends on the runtime and its access controls.
+
+## What the public case establishes
+
+The export makes the role design, workflow structure, evidence contracts, and selected processing scripts available for inspection. It shows how I approached turning ambiguous operational work into components with clearer responsibilities.
+
+It does not establish measured time savings, accuracy, production reliability, or financial return. A reviewer cannot reproduce the full system from this version, and the repository does not include a public benchmark or automated evaluation suite.
+
+A useful next step for public demonstration is a small, independent workflow with synthetic inputs, expected outputs, and tests. That would let someone inspect execution without depending on the original operational environment.
+
+## Publication boundaries
+
+Client information, internal procedures, endpoints, and credentials are outside the scope of this case. Redactions in the source files should not be filled in from guesses.
+
+See [export notes](README-PORTFOLIO.md) and [publication boundaries](LEGAL_AND_PRIVACY_NOTE.md).
+
+[Back to Pantheon](README.md)
