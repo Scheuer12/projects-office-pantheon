@@ -1,6 +1,6 @@
-# [ORG_NAME] — Portfolio Sanitized Export
+# Pantheon — Export Notes
 
-This package is a **sanitized** export of a multi-agent organization originally orchestrated on [AGENT_PLATFORM].
+This package is a redacted export of the Pantheon operating model. Start with the [project overview](README.md) or [case study](CASE_STUDY.md); this document explains how to read the exported source files.
 
 ## Purpose
 
@@ -48,6 +48,7 @@ A reviewer should see craft and structure, not be able to reconstruct employer p
 - Client hosts, [COMM_CHANNEL]s, tokens, paths
 - Detailed SOPs, SLA numbers, matrices, nomenclatures, and process checklists
 
-## Not production-ready as-is
+## Execution limits
 
-Secrets and live [REDACTED_ENDPOINT]s were intentionally stripped. Do not treat this zip as a runnable company import without re-supplying environment configuration.
+Secrets, endpoints, configuration values, and parts of the implementation were removed. This repository is not a runnable company import, and adding environment configuration alone will not restore it. The source files are included for architectural inspection.
+

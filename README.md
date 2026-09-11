@@ -1,68 +1,75 @@
-# [ORG_NAME]
+# Pantheon — AI Project Operations
 
-Sanitized portfolio showcase of a multi-agent operating model for project delivery, domain discovery, knowledge mapping, and AI-assisted governance.
+A case study of how I structured specialist agents for project delivery, process discovery, and operational decisions.
 
-![Sanitized org chart](images/org-chart.svg)
+The problem behind Pantheon is familiar in project work: schedules, meeting notes, process definitions, and decisions live in different places. A useful analysis needs to connect them, show where its conclusions came from, and recognize when a decision still belongs to a person.
 
-This repository is intentionally redacted. It demonstrates architecture, role design, skill-crafting, handoff contracts, governance patterns, and AI operating discipline without exposing employer, client, product, credential, or process-sensitive information.
+This repository contains a redacted export of that operating model: agent roles, handoff contracts, skill packages, and supporting Python scripts. **It is an architecture case study, not a runnable deployment.**
 
-See [CASE_STUDY.md](CASE_STUDY.md) for the public-facing narrative and [LEGAL_AND_PRIVACY_NOTE.md](LEGAL_AND_PRIVACY_NOTE.md) for publication boundaries.
+## Where to start
 
-## Contents
+| If you want to understand... | Start here |
+|---|---|
+| The problem, my contribution, and the main decisions | [Case study](CASE_STUDY.md) |
+| How responsibilities are distributed | [Agent organization](#agent-organization) |
+| How a workflow is broken into stages | [Blueprint pipeline](skills/company/TAG_ORG_UNIT/gaia/references/shared/blueprint-pipeline.yaml) |
+| How evidence is represented | [Evidence taxonomy](skills/company/TAG_ORG_UNIT/papiro/references/shared/evidence-taxonomy.yaml) |
+| What the Python scripts do | [Transcript scanner](skills/company/TAG_ORG_UNIT/TAG_DOMAIN_SETUP_SKILL/scripts/scan_transcricao.py) and [confirmed-segment calculation](skills/company/TAG_ORG_UNIT/TAG_DOMAIN_SETUP_SKILL/scripts/compute_indice.py) |
+| What the placeholders mean | [Export notes](README-PORTFOLIO.md) |
 
-| Content | Count |
-|---------|-------|
-| Agents | 13 |
-| Projects | 6 |
-| Skills | 19 |
-| Tasks | 4 |
+The linked implementation files retain redactions. They show the structure of the work, with some details intentionally omitted.
 
-## Agent Organization
+## Agent organization
 
-| Agent | Responsibility | Reports To |
-|-------|----------------|------------|
-| CEO | Executive prioritization, escalation, and ethical guardrails | - |
-| CTO | Agent architecture, runtime boundaries, review discipline | CEO |
-| PMO (Zeus) | Portfolio synthesis, delegation, risk escalation | CEO |
-| Cronos | Structural PM analysis: schedule, workload, operational signals | PMO |
-| Athena | Qualitative PM analysis: evidence, scope, client risk, governance | PMO |
-| Gaia | Domain blueprint orchestration across specialist agents | PMO |
-| Papiro | Intake sufficiency, discovery completeness, question design | Gaia |
-| Perseu | AS IS structuring, process baseline, gap framing | Gaia |
-| Atlas | TO BE storytelling, product-language mapping, read-only refinement | Gaia |
-| MappingFromTo | Board-gated concept mapping between source and target vocabularies | Gaia |
-| [DOMAIN_SETUP_AGENT] | Domain setup planning and sanitized deliverable generation | PMO |
-| [QUERY_BRIDGE_AGENT] | Controlled query interface, stubbed for portfolio safety | CEO |
-| UserDataHunter | Evidence retrieval pattern, redacted and non-runnable | PMO |
+![Pantheon agent organization](images/org-chart.svg)
 
-## Placeholder Projects
+| Role | Responsibility |
+|---|---|
+| CEO | Prioritization and escalation |
+| CTO | Agent architecture, runtime boundaries, and review discipline |
+| PMO / Zeus | Portfolio synthesis and coordination of specialist work |
+| Cronos | Schedule, workload, and structural project analysis |
+| Athena | Evidence, scope, client risk, and governance review |
+| Gaia | Process discovery and blueprint coordination |
+| Papiro | Intake completeness and questions about missing information |
+| Perseu | AS-IS process structure and gaps |
+| Atlas | TO-BE documentation and read-only refinement |
+| MappingFromTo | Mapping source concepts to a target vocabulary, subject to human approval |
+| Domain setup agent | Setup planning and document generation |
+| Query bridge agent | Controlled query interface; stubbed in this export |
+| UserDataHunter | Evidence retrieval pattern; redacted in this export |
 
-- **[PROJECT_CLIENT_1]**
-- **[PROJECT_CLIENT_2]**
-- **[PROJECT_CLIENT_3]**
-- **[PROJECT_CLIENT_4]**
-- **[PROJECT_CLIENT_5]**
-- **[PROJECT_CLIENT_6]**
+These are responsibilities in the operating model. The public files do not demonstrate a live group of agents running together.
 
-## Skill Surface
+## What I focused on
 
-| Skill | Demonstrated Pattern |
-|-------|----------------------|
-| cto-agent-architecture | Skill design, agent governance, review gates, runtime boundaries |
-| pmo-zeus | Portfolio triage, delegation, managerial synthesis |
-| cronos | Quantitative PM reasoning and workload/schedule controllers |
-| athena | Qualitative evidence review, scope checks, client-risk analysis |
-| gaia | Specialist orchestration for domain blueprint work |
-| papiro | Intake audit and sufficiency checks |
-| perseu | AS IS modeling and gap-safe handoff contracts |
-| atlas | TO BE narrative generation with source discipline |
-| mapping-from-to | Human-approved concept mapping and glossary control |
-| setup-domain | Sanitized setup-document pipeline |
-| consultar-[ENV_VAR] | Stubbed bridge pattern with no external access |
-| paperclip skills | General agent/company scaffolding utilities |
+- Separate schedule and workload calculations from qualitative risk analysis.
+- Make each handoff explicit about inputs, outputs, and unresolved questions.
+- Preserve source references instead of presenting every statement as a confirmed fact.
+- Keep system access and decision authority explicit, including when human approval is required.
+- Use Python for repeatable processing and calculations alongside agent instructions.
 
-## Portfolio Safety
+The [case study](CASE_STUDY.md) connects these choices to specific files and explains their limits.
 
-This package is not a runnable company import. Live endpoints, credentials, product names, client identities, operational data, internal paths, and implementation-specific routines were removed or replaced with placeholders.
+## Repository layout
 
-Some phrases are intentionally broken by placeholders such as `[REDACTED_INSTRUCTION]`. That is deliberate: the goal is to show structure and reasoning quality without enabling reconstruction of confidential context.
+| Path | Contents |
+|---|---|
+| `agents/` | Role definitions and operating instructions |
+| `skills/company/` | Domain workflows, references, schemas, and scripts |
+| `skills/paperclipai/` | General platform-related utility packages included in the export |
+| `projects/` | Redacted project placeholders |
+| `tasks/` | Task definitions included in the export |
+| `images/` | Public architecture illustration |
+
+## Public scope
+
+Names, endpoints, credentials, internal paths, and operational details have been removed or replaced in this export. Some source files contain incomplete sentences or configuration values as a result. Restoring a few environment variables is not sufficient to make it a working system.
+
+The repository does not include a reproducible benchmark or verified savings figures. Its purpose is to make the architecture and working approach inspectable.
+
+See the [publication boundaries](LEGAL_AND_PRIVACY_NOTE.md) and [export notes](README-PORTFOLIO.md).
+
+## License
+
+[MIT](LICENSE).
