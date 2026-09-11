@@ -57,6 +57,37 @@ Finding a risk does not automatically authorize a scope change, a system update,
 
 The [communication action matrix](skills/company/TAG_ORG_UNIT/pmo-zeus/references/shared/communication-action-matrix.yaml) and [mapping approval gate](skills/company/TAG_ORG_UNIT/mapping-from-to/references/shared/board-gate.yaml) show parts of this design. Technical enforcement still depends on the runtime and its access controls.
 
+## Worked example: conflicting delivery signals
+
+This is a synthetic scenario written to explain the design. The source IDs below refer only to the invented inputs in this table. It is not a customer case or output from a running agent system.
+
+| Source | Input |
+|---|---|
+| S1 — schedule snapshot, Monday 09:00 | Acceptance testing starts Thursday. Import validation is a prerequisite and is marked complete. |
+| S2 — meeting note, Monday 10:00 | The implementation lead reports that two import errors remain unresolved. There is no repair estimate yet. |
+| S3 — approved scope, revision 2 | Acceptance testing requires the import validation checklist to pass. |
+
+The useful question is whether the team has enough evidence to keep Thursday's plan.
+
+**Structural analysis.** Cronos would identify the dependency between import validation and testing. The inputs do not include a repair estimate or remaining validation effort, so they do not support calculating a new finish date.
+
+**Evidence review.** Athena would retain the conflict between S1 and S2. The note establishes that someone reported errors; it does not independently establish their severity or whether they fail the checklist in S3. Neither silently trusting the schedule nor declaring a confirmed delay resolves that gap.
+
+**Consolidated handoff.** Zeus would prepare a decision brief along these lines:
+
+| Field | Proposed content |
+|---|---|
+| Finding | Readiness for Thursday's acceptance testing is unresolved. |
+| Evidence | S1 marks the prerequisite complete; S2 reports open errors; S3 defines the acceptance condition. |
+| Risk | Testing may need to move if the errors prevent the checklist from passing. |
+| Missing information | Checklist results, error severity, repair estimate, and time needed for revalidation. |
+| Next step | Ask the implementation lead to reconcile the status and provide the missing evidence. |
+| Decision boundary | The responsible person reviews the evidence before approving any schedule change or external update. |
+
+The output should preserve that uncertainty. It should not invent a delay estimate, treat a reported error as a verified blocker, or change the schedule automatically.
+
+For a future executable demo, this scenario can become an evaluation fixture: check that the output cites all three sources, retains the conflict, asks for the missing evidence, and proposes no unsupported completion date. Those checks are proposed acceptance criteria, not tests already implemented here.
+
 ## What the public case establishes
 
 The export makes the role design, workflow structure, evidence contracts, and selected processing scripts available for inspection. It shows how I approached turning ambiguous operational work into components with clearer responsibilities.
