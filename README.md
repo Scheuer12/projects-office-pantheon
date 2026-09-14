@@ -6,6 +6,8 @@ The problem behind Pantheon is familiar in project work: schedules, meeting note
 
 This repository contains a redacted export of that operating model: agent roles, handoff contracts, skill packages, and supporting Python scripts. **It is an architecture case study, not a runnable deployment.**
 
+The applied stack for this project includes LLMs, server and cloud management, API, MCP, agentic solution design, RAG, data chunking, JWT-based communication, headers auth, anti-bypass methods, Python, Paperclip and (obviously) md/JSON/yaml.
+
 ## Where to start
 
 | If you want to understand... | Start here |
